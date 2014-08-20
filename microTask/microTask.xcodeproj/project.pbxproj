@@ -391,12 +391,28 @@
 			name = "find task&activity";
 			sourceTree = "<group>";
 		};
-		DD298C1119A095BC004BFC65 /* UITool */ = {
+		DD1FD56119A4F6BA0008BB3C /* uitility */ = {
 			isa = PBXGroup;
 			children = (
+				DD298C1119A095BC004BFC65 /* uiUtil */,
+			);
+			name = uitility;
+			sourceTree = "<group>";
+		};
+		DD1FD56219A4F6DC0008BB3C /* imageScrollUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = imageScrollUtil;
+			sourceTree = "<group>";
+		};
+		DD298C1119A095BC004BFC65 /* uiUtil */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FD56219A4F6DC0008BB3C /* imageScrollUtil */,
 				DD63BAD61994F7E7007FEB06 /* KxMenu */,
 			);
-			name = UITool;
+			name = uiUtil;
 			sourceTree = "<group>";
 		};
 		DD494EF8198F8F08009641C3 = {
@@ -451,7 +467,7 @@
 		DD494F0A198F8F08009641C3 /* microTask */ = {
 			isa = PBXGroup;
 			children = (
-				DD298C1119A095BC004BFC65 /* UITool */,
+				DD1FD56119A4F6BA0008BB3C /* uitility */,
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
