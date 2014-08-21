@@ -31,7 +31,4 @@
 -(void)tapImage:(MITapGesture*)gesture;
 -(void)closeImageDetail:(UIGestureRecognizer*)gesture;
 
-
--(void)swipeRight:(MISwipeGesture*)gesture;
--(void)swipeLeft:(MISwipeGesture*)gesture;
 @end

@@ -9,7 +9,7 @@
 #import "MIFindCell.h"
 #import "MIViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "MIImageScrollController.h"
 @implementation MIFindCell
 
 - (void)awakeFromNib
@@ -67,66 +67,17 @@
     int index=[[gesture.dic objectForKey:@"index"] intValue];
     //同一个cell中的一组图片
     NSArray *photos=[gesture.dic objectForKey:@"photos"];
-    //返回主controller单例
-    MIViewController *mainController=[MIViewController getInstance];
-    //创建全屏view
-    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
-    view.backgroundColor=[UIColor blackColor];
-    [mainController.view addSubview:view];
-    
-    UIImageView *imageDeatailView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 500, 500)];
-    
-    [view addSubview:imageDeatailView];
 
+    //主controller单例
+    MIViewController *mainController=[MIViewController getInstance];
+    MIImageScrollController *imageSController=[[MIImageScrollController alloc] initWithNibName:@"imageScrollView" bundle:nil withPhotos:photos withInitIndex:index];
+    [mainController addChildViewController:imageSController];
+    [mainController.view addSubview:imageSController.view];
     
-    [self setImageScale:imageDeatailView photoUrl:[photos objectAtIndex:index]];
-    //添加底部label
-    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(1024/2-100/2, 768-40, 100, 40)];
-    label.textAlignment=NSTextAlignmentCenter;
-    label.textColor=[UIColor whiteColor];
-    label.text=[NSString stringWithFormat:@"%d/%d",index+1,photos.count];
     
-    [view addSubview:label];
-    
-    //添加点击事件
-    UIGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeImageDetail:)];
-    view.userInteractionEnabled=YES;
-    [view addGestureRecognizer:tap];
-    
-    //添加滑动事件
-    //向右滑
-    if (index>0)
-    {
-        MISwipeGesture *swipeGesture=[[MISwipeGesture alloc] initWithTarget:self action:@selector(swipeRight:)];
-        
-        [swipeGesture setDirection:UISwipeGestureRecognizerDirectionRight];
-        
-        [view addGestureRecognizer:swipeGesture];
-        
-        
-    }
-     //向左边滑
-    if (index<photos.count-1)
-    {
-        MISwipeGesture *swipeGesture=[[MISwipeGesture alloc] initWithTarget:self action:@selector(swipeLeft:)];
-        [swipeGesture setDirection:UISwipeGestureRecognizerDirectionLeft];
-        
-        [view addGestureRecognizer:swipeGesture];
-    }
-    
-}
+  }
 -(void)closeImageDetail:(UIGestureRecognizer*)gesture
 {
     [gesture.view removeFromSuperview];
-}
-
--(void)swipeLeft:(MISwipeGesture*)gesture
-{
-    NSLog(@"swipeLeft");
-}
-
--(void)swipeRight:(MISwipeGesture*)gesture
-{
-    NSLog(@"swipeRight");
 }
 @end

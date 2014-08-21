@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A2F1D639-FC7B-4217-B57C-C49CAE23E546</string>
+	<key>IDESourceControlProjectName</key>
+	<string>microTask</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0FFC15F5-6467-44C0-86E3-EE588B255386</key>
+		<string>https://github.com/bhhbazinga/MicroTask-IPAD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>microTask/microTask.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0FFC15F5-6467-44C0-86E3-EE588B255386</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bhhbazinga/MicroTask-IPAD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0FFC15F5-6467-44C0-86E3-EE588B255386</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0FFC15F5-6467-44C0-86E3-EE588B255386</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MicroTask-IPAD</string>
+		</dict>
+	</array>
+</dict>
+</plist>

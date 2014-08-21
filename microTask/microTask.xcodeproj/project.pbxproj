@@ -104,6 +104,8 @@
 		DDF0FDC61998808000712B27 /* registerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF0FDC51998808000712B27 /* registerView.xib */; };
 		DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF0FDD21998891900712B27 /* MIUpLoadFile.m */; };
 		DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF82C6E19A1CA3300F1FE83 /* MICalendar.m */; };
+		DDFE316F19A6234B00A0CE41 /* MIImageScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE316E19A6234B00A0CE41 /* MIImageScrollController.m */; };
+		DDFE317119A6246000A0CE41 /* imageScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFE317019A6246000A0CE41 /* imageScrollView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +308,9 @@
 		DDF0FDD21998891900712B27 /* MIUpLoadFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUpLoadFile.m; sourceTree = "<group>"; };
 		DDF82C6D19A1CA3300F1FE83 /* MICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICalendar.h; sourceTree = "<group>"; };
 		DDF82C6E19A1CA3300F1FE83 /* MICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICalendar.m; sourceTree = "<group>"; };
+		DDFE316D19A6234B00A0CE41 /* MIImageScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIImageScrollController.h; sourceTree = "<group>"; };
+		DDFE316E19A6234B00A0CE41 /* MIImageScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIImageScrollController.m; sourceTree = "<group>"; };
+		DDFE317019A6246000A0CE41 /* imageScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = imageScrollView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +399,7 @@
 		DD298C1119A095BC004BFC65 /* UITool */ = {
 			isa = PBXGroup;
 			children = (
+				DDFE316919A620F700A0CE41 /* imageScrollView */,
 				DD63BAD61994F7E7007FEB06 /* KxMenu */,
 			);
 			name = UITool;
@@ -851,6 +857,16 @@
 			name = DateTool;
 			sourceTree = "<group>";
 		};
+		DDFE316919A620F700A0CE41 /* imageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE316D19A6234B00A0CE41 /* MIImageScrollController.h */,
+				DDFE316E19A6234B00A0CE41 /* MIImageScrollController.m */,
+				DDFE317019A6246000A0CE41 /* imageScrollView.xib */,
+			);
+			name = imageScrollView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -931,6 +947,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFE317119A6246000A0CE41 /* imageScrollView.xib in Resources */,
 				DDF0FDC61998808000712B27 /* registerView.xib in Resources */,
 				DD8DFE5919A0FA6300FD7C0F /* point.png in Resources */,
 				DD494F7D198F9217009641C3 /* readme.txt in Resources */,
@@ -1038,6 +1055,7 @@
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,
 				DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */,
 				DDA3FC3B19A4731F00D319E4 /* MISwipeGesture.m in Sources */,
+				DDFE316F19A6234B00A0CE41 /* MIImageScrollController.m in Sources */,
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
 				DD494F11198F8F08009641C3 /* main.m in Sources */,
 				DD4295021997422F001756EE /* MIPublishTaskActivityController.m in Sources */,

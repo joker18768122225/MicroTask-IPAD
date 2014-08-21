@@ -32,9 +32,7 @@
      selector:@selector(forwardToMain:)
      name:@"login"//表示消息名称，发送跟接收双方都要一致
      object:nil];
-    
-    
-    
+ 
 }
 
 - (void)didReceiveMemoryWarning
