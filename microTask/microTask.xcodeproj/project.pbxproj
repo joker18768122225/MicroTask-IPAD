@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8893C1231D6841A2A74F9C1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D0C8D56B1465C85D1AB1D /* libPods.a */; };
+		DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134019A71DB100D38D04 /* MITapGesture.m */; };
+		DD0A134719A71E4800D38D04 /* MITAdetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134519A71E4800D38D04 /* MITAdetailController.m */; };
+		DD0A134819A71E4800D38D04 /* TAdetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0A134619A71E4800D38D04 /* TAdetailView.xib */; };
+		DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134B19A733EB00D38D04 /* MIImageGridView.m */; };
+		DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134E19A7395B00D38D04 /* MIImageScaleUtil.m */; };
 		DD0C8533199791E800B4EA3B /* MYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C8532199791E800B4EA3B /* MYButton.m */; };
 		DD111B4F199E35BD00D0ED2C /* MIProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DD111B4E199E35BD00D0ED2C /* MIProperties.m */; };
 		DD4295021997422F001756EE /* MIPublishTaskActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4295011997422F001756EE /* MIPublishTaskActivityController.m */; };
@@ -94,10 +99,9 @@
 		DDA2497119A3292E0049FC0E /* study.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496E19A3292E0049FC0E /* study.png */; };
 		DDA2497319A32FC10049FC0E /* all.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497219A32FC10049FC0E /* all.png */; };
 		DDA2497519A332060049FC0E /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497419A332060049FC0E /* group.png */; };
-		DDA3FC3819A464F100D319E4 /* MITapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA3FC3719A464F100D319E4 /* MITapGesture.m */; };
-		DDA3FC3B19A4731F00D319E4 /* MISwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA3FC3A19A4731F00D319E4 /* MISwipeGesture.m */; };
 		DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */; };
 		DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBC70B819A0486D0078371E /* MIHttpTool.m */; };
+		DDCC197D19A78B3C00FB4D65 /* UIView+cat.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */; };
 		DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEE1995F20F008D4388 /* MIFindCell.m */; };
 		DDEDD1CA199F87B9003DBE51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEDD1C9199F87B9003DBE51 /* MapKit.framework */; };
 		DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF0FDC31998806200712B27 /* MIRegisterController.m */; };
@@ -121,6 +125,15 @@
 /* Begin PBXFileReference section */
 		822BFFE18CEA49EC92FB63D6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D98D0C8D56B1465C85D1AB1D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0A133F19A71DB100D38D04 /* MITapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITapGesture.h; sourceTree = "<group>"; };
+		DD0A134019A71DB100D38D04 /* MITapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITapGesture.m; sourceTree = "<group>"; };
+		DD0A134419A71E4800D38D04 /* MITAdetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITAdetailController.h; sourceTree = "<group>"; };
+		DD0A134519A71E4800D38D04 /* MITAdetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITAdetailController.m; sourceTree = "<group>"; };
+		DD0A134619A71E4800D38D04 /* TAdetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAdetailView.xib; sourceTree = "<group>"; };
+		DD0A134A19A733EB00D38D04 /* MIImageGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIImageGridView.h; sourceTree = "<group>"; };
+		DD0A134B19A733EB00D38D04 /* MIImageGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIImageGridView.m; sourceTree = "<group>"; };
+		DD0A134D19A7395B00D38D04 /* MIImageScaleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIImageScaleUtil.h; sourceTree = "<group>"; };
+		DD0A134E19A7395B00D38D04 /* MIImageScaleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIImageScaleUtil.m; sourceTree = "<group>"; };
 		DD0C8531199791E800B4EA3B /* MYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYButton.h; sourceTree = "<group>"; };
 		DD0C8532199791E800B4EA3B /* MYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYButton.m; sourceTree = "<group>"; };
 		DD111B4D199E35BD00D0ED2C /* MIProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIProperties.h; sourceTree = "<group>"; };
@@ -290,16 +303,14 @@
 		DDA2496E19A3292E0049FC0E /* study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study.png; sourceTree = "<group>"; };
 		DDA2497219A32FC10049FC0E /* all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all.png; sourceTree = "<group>"; };
 		DDA2497419A332060049FC0E /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
-		DDA3FC3619A464F100D319E4 /* MITapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITapGesture.h; sourceTree = "<group>"; };
-		DDA3FC3719A464F100D319E4 /* MITapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITapGesture.m; sourceTree = "<group>"; };
-		DDA3FC3919A4731F00D319E4 /* MISwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MISwipeGesture.h; sourceTree = "<group>"; };
-		DDA3FC3A19A4731F00D319E4 /* MISwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MISwipeGesture.m; sourceTree = "<group>"; };
 		DDB63DEA1995ECC5008D4388 /* MIFindCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFindCellInfo.h; sourceTree = "<group>"; };
 		DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCellInfo.m; sourceTree = "<group>"; };
 		DDB63DED1995F20F008D4388 /* MIFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFindCell.h; sourceTree = "<group>"; };
 		DDB63DEE1995F20F008D4388 /* MIFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCell.m; sourceTree = "<group>"; };
 		DDBC70B719A0486D0078371E /* MIHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHttpTool.h; sourceTree = "<group>"; };
 		DDBC70B819A0486D0078371E /* MIHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHttpTool.m; sourceTree = "<group>"; };
+		DDCC197B19A78B3C00FB4D65 /* UIView+cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+cat.h"; sourceTree = "<group>"; };
+		DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+cat.m"; sourceTree = "<group>"; };
 		DDEDD1C9199F87B9003DBE51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DDF0FDC21998806200712B27 /* MIRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIRegisterController.h; sourceTree = "<group>"; };
 		DDF0FDC31998806200712B27 /* MIRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIRegisterController.m; sourceTree = "<group>"; };
@@ -365,6 +376,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0A134219A71DFE00D38D04 /* search table */ = {
+			isa = PBXGroup;
+			children = (
+				DD63BADE19950EB4007FEB06 /* findView.xib */,
+				DD5DF71B199674C200D2CD30 /* FindCell.xib */,
+				DD63BAE119950F7C007FEB06 /* MIFindController.h */,
+				DD63BAE219950F7C007FEB06 /* MIFindController.m */,
+				DDB63DEA1995ECC5008D4388 /* MIFindCellInfo.h */,
+				DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */,
+				DDB63DEE1995F20F008D4388 /* MIFindCell.m */,
+				DDB63DED1995F20F008D4388 /* MIFindCell.h */,
+			);
+			name = "search table";
+			sourceTree = "<group>";
+		};
+		DD0A134319A71E1B00D38D04 /* detail info */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A134419A71E4800D38D04 /* MITAdetailController.h */,
+				DD0A134519A71E4800D38D04 /* MITAdetailController.m */,
+				DD0A134619A71E4800D38D04 /* TAdetailView.xib */,
+			);
+			name = "detail info";
+			sourceTree = "<group>";
+		};
+		DD0A134919A733C500D38D04 /* imageGridView */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A133F19A71DB100D38D04 /* MITapGesture.h */,
+				DD0A134019A71DB100D38D04 /* MITapGesture.m */,
+				DD0A134A19A733EB00D38D04 /* MIImageGridView.h */,
+				DD0A134B19A733EB00D38D04 /* MIImageGridView.m */,
+				DD0A134D19A7395B00D38D04 /* MIImageScaleUtil.h */,
+				DD0A134E19A7395B00D38D04 /* MIImageScaleUtil.m */,
+			);
+			name = imageGridView;
+			sourceTree = "<group>";
+		};
 		DD111B50199E50A500D0ED2C /* publish task&activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,29 +429,22 @@
 		DD111B54199E53F400D0ED2C /* find task&activity */ = {
 			isa = PBXGroup;
 			children = (
-				DD63BADE19950EB4007FEB06 /* findView.xib */,
-				DD63BAE119950F7C007FEB06 /* MIFindController.h */,
-				DD63BAE219950F7C007FEB06 /* MIFindController.m */,
-				DDB63DEA1995ECC5008D4388 /* MIFindCellInfo.h */,
-				DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */,
-				DDB63DEE1995F20F008D4388 /* MIFindCell.m */,
-				DDB63DED1995F20F008D4388 /* MIFindCell.h */,
-				DD5DF71B199674C200D2CD30 /* FindCell.xib */,
-				DDA3FC3619A464F100D319E4 /* MITapGesture.h */,
-				DDA3FC3719A464F100D319E4 /* MITapGesture.m */,
-				DDA3FC3919A4731F00D319E4 /* MISwipeGesture.h */,
-				DDA3FC3A19A4731F00D319E4 /* MISwipeGesture.m */,
+				DD0A134319A71E1B00D38D04 /* detail info */,
+				DD0A134219A71DFE00D38D04 /* search table */,
 			);
 			name = "find task&activity";
 			sourceTree = "<group>";
 		};
-		DD298C1119A095BC004BFC65 /* UITool */ = {
+		DD298C1119A095BC004BFC65 /* UIUtil */ = {
 			isa = PBXGroup;
 			children = (
-				DDFE316919A620F700A0CE41 /* imageScrollView */,
+				DD0A134919A733C500D38D04 /* imageGridView */,
+				DDFE316919A620F700A0CE41 /* imageScrollController */,
 				DD63BAD61994F7E7007FEB06 /* KxMenu */,
+				DDCC197B19A78B3C00FB4D65 /* UIView+cat.h */,
+				DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */,
 			);
-			name = UITool;
+			name = UIUtil;
 			sourceTree = "<group>";
 		};
 		DD494EF8198F8F08009641C3 = {
@@ -457,7 +499,7 @@
 		DD494F0A198F8F08009641C3 /* microTask */ = {
 			isa = PBXGroup;
 			children = (
-				DD298C1119A095BC004BFC65 /* UITool */,
+				DD298C1119A095BC004BFC65 /* UIUtil */,
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
@@ -622,19 +664,10 @@
 		DD63BABE1994CD67007FEB06 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				DD63BAC91994E823007FEB06 /* middleView */,
 				DD494F19198F8F09009641C3 /* MIViewController.h */,
 				DD494F1A198F8F09009641C3 /* MIViewController.m */,
 			);
 			name = main;
-			sourceTree = "<group>";
-		};
-		DD63BAC91994E823007FEB06 /* middleView */ = {
-			isa = PBXGroup;
-			children = (
-				DDB63DDC1995D2FA008D4388 /* findView */,
-			);
-			name = middleView;
 			sourceTree = "<group>";
 		};
 		DD63BAD61994F7E7007FEB06 /* KxMenu */ = {
@@ -809,13 +842,6 @@
 			path = button;
 			sourceTree = "<group>";
 		};
-		DDB63DDC1995D2FA008D4388 /* findView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = findView;
-			sourceTree = "<group>";
-		};
 		DDBC70B619A0484C0078371E /* uitility */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,14 +883,14 @@
 			name = DateTool;
 			sourceTree = "<group>";
 		};
-		DDFE316919A620F700A0CE41 /* imageScrollView */ = {
+		DDFE316919A620F700A0CE41 /* imageScrollController */ = {
 			isa = PBXGroup;
 			children = (
 				DDFE316D19A6234B00A0CE41 /* MIImageScrollController.h */,
 				DDFE316E19A6234B00A0CE41 /* MIImageScrollController.m */,
 				DDFE317019A6246000A0CE41 /* imageScrollView.xib */,
 			);
-			name = imageScrollView;
+			name = imageScrollController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -947,6 +973,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0A134819A71E4800D38D04 /* TAdetailView.xib in Resources */,
 				DDFE317119A6246000A0CE41 /* imageScrollView.xib in Resources */,
 				DDF0FDC61998808000712B27 /* registerView.xib in Resources */,
 				DD8DFE5919A0FA6300FD7C0F /* point.png in Resources */,
@@ -1048,19 +1075,22 @@
 				DD494F15198F8F08009641C3 /* MIAppDelegate.m in Sources */,
 				DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */,
 				DD63BAE319950F7C007FEB06 /* MIFindController.m in Sources */,
-				DDA3FC3819A464F100D319E4 /* MITapGesture.m in Sources */,
+				DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */,
 				DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */,
 				DD58394C1991E90700ED9BBA /* MIUser.m in Sources */,
 				DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */,
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,
 				DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */,
-				DDA3FC3B19A4731F00D319E4 /* MISwipeGesture.m in Sources */,
 				DDFE316F19A6234B00A0CE41 /* MIImageScrollController.m in Sources */,
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
+				DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */,
 				DD494F11198F8F08009641C3 /* main.m in Sources */,
+				DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */,
+				DD0A134719A71E4800D38D04 /* MITAdetailController.m in Sources */,
 				DD4295021997422F001756EE /* MIPublishTaskActivityController.m in Sources */,
 				DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */,
 				DD0C8533199791E800B4EA3B /* MYButton.m in Sources */,
+				DDCC197D19A78B3C00FB4D65 /* UIView+cat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

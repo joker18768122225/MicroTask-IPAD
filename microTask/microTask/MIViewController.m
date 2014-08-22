@@ -68,7 +68,7 @@ static MIViewController *mainControllerInstance=nil;
     UIView *findView=[findController view];
     _middleView=findView;
     _middleController=findController;
-    [findView setFrame:CGRectMake(77, 0, 500, 768)];
+    [findView setFrame:CGRectMake(74, 0, 500, 768)];
     [self.view addSubview:_middleView];
     [self fadeIn];
 
@@ -134,7 +134,7 @@ static MIViewController *mainControllerInstance=nil;
     UIView *taskView=[taskController view];
     _middleView=taskView;
     _middleController=taskController;
-    [taskView setFrame:CGRectMake(77, 0, 500, 768)];
+    [taskView setFrame:CGRectMake(74, 0, 500, 768)];
     [self.view addSubview:_middleView];
     [self fadeIn];
 

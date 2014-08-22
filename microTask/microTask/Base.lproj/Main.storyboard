@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" id="0Ut-d9-956">
                                 <rect key="frame" x="0.0" y="0.0" width="74" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vVz-L3-8EK">
                                 <rect key="frame" x="17" y="266" width="40" height="40"/>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-27528" y="-21184"/>
+            <point key="canvasLocation" x="-27497" y="-21192"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="o2A-8D-T6V">

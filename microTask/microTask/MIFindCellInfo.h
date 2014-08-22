@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface MIFindCellInfo : NSObject
+
 @property(nonatomic) NSString *avatar;
 @property(nonatomic) NSString *nickName;
 @property(nonatomic) NSString *title;
 @property(nonatomic) NSString *type;
 @property(nonatomic) NSString *can_need_activity;
-@property(nonatomic) NSString *time;
+
+@property(nonatomic) NSString *publishDate;
+@property(nonatomic) NSString *expireDate;
+
 @property(nonatomic) NSString *content;
+@property(nonatomic) NSString *reward;
+
 @property(nonatomic,assign) int commentCount;
 @property(nonatomic,assign) int forwardCount;
 @property(nonatomic,assign) int likeCount;

@@ -8,6 +8,7 @@
 
 #import "MIImageScrollController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "MIImageScaleUtil.h"
 @interface MIImageScrollController ()
 {
     NSArray *_photos;//图片url数组
@@ -84,7 +85,8 @@
         [self.scrollView addSubview:view];
         //添加imageView
         UIImageView *imageDetailView=[[UIImageView alloc] init];
-        [self setImageScaleAndContent:imageDetailView photoUrl:[_photos objectAtIndex:i]];
+        [MIImageScaleUtil setImageScaleAndContent:CGSizeMake(1024, 768) imageView:imageDetailView photoUrl:[_photos objectAtIndex:i]];
+        
         [view addSubview:imageDetailView];
         
         //添加底部label
@@ -140,8 +142,8 @@
     
     
     // velocity.x=100;
-    //速度大于3.0则直接翻页
-    if (fabs(velocity.x)>3.0)
+    //速度大于1.0则直接翻页
+    if (fabs(velocity.x)>1.0)
     {
         //左滑
         if (velocity.x>0)

@@ -16,6 +16,10 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import "MICalendar.h"
 #import "MITapGesture.h"
+#import "MIImageGridView.h"
+#import "MIViewController.h"
+#import "MITAdetailController.h"
+#import "UIView+cat.h"
 
 ///通知列表更新
 static NSString *NOTIFICATION_LOAD=@"load_task_activity";
@@ -203,6 +207,7 @@ NSString *type=@"all";
 }
 -(void)reloadActivity
 {
+     self.can_need_activityLabel.text=@"活动";
     [self reloadWithCan_Need_Activity:@"activity" withType:nil];
     
 }
@@ -317,19 +322,21 @@ NSString *type=@"all";
         NSString *can_need_activity=[task_activity objectForKey:@"can_need_activity"];
         NSString *title=[task_activity objectForKey:@"title"];
         NSString *content=[task_activity objectForKey:@"content"];
+        NSString *reward=[task_activity objectForKey:@"reward"];
         
         //添加进cellInfos中
         MIFindCellInfo *cellInfo=[[MIFindCellInfo alloc]init];
         cellInfo.nickName=nickName;
-        cellInfo.time=publishdate;
+        cellInfo.publishDate=publishdate;
+        cellInfo.expireDate=expiredate;
         cellInfo.avatar=avatar;
         
         if ([can_need_activity isEqualToString:@"can"])
-            cellInfo.can_need_activity=@"我可以帮忙";
+            cellInfo.can_need_activity=@"可以帮忙";
         else if ([can_need_activity isEqualToString:@"need"])
-            cellInfo.can_need_activity=@"我需要帮忙";
+            cellInfo.can_need_activity=@"需要帮忙";
         else
-            cellInfo.can_need_activity=@"活动";
+            cellInfo.can_need_activity=@"发布活动";
         
         NSArray *photos=[task_activity objectForKey:@"images"];
         //判断是否返回的图片是空数组
@@ -337,18 +344,14 @@ NSString *type=@"all";
         {
             cellInfo.photos=photos;
         }
-        
-        NSLog(@"%@",cellInfo.photos);
         cellInfo.type=type;
         cellInfo.title=title;
         cellInfo.content=content;
+        cellInfo.reward=reward;
         
         [cellInfos addObject:cellInfo];
     }
-    
     [self reloadCellInfos];
-    
-    
 }
 
 ///加载了任务活动数据后回调
@@ -391,7 +394,14 @@ NSString *type=@"all";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@",indexPath);
+    
+    MIViewController *mainController= [MIViewController getInstance];
+    MITAdetailController *taController= [[MITAdetailController alloc] initWithNibName:@"TAdetailView" bundle:nil taInfo:[cellInfos objectAtIndex:indexPath.row]];
+    [mainController addChildViewController:taController];
+    [mainController.view addSubview:taController.view];
+    
+
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -446,9 +456,6 @@ NSString *type=@"all";
         return bottomCell;
     }
     
-    
-    
-    
     MIFindCellInfo *info=[cellInfos objectAtIndex:row];
     cell.nickNameLabel.text=info.nickName;
     
@@ -456,65 +463,45 @@ NSString *type=@"all";
     [cell.avatarButton sd_setImageWithURL:[NSURL URLWithString:info.avatar] forState:UIControlStateNormal placeholderImage:nil];
     
     
-    cell.timeLabel.text=info.time;
-    cell.titleLabel.text=info.title;
-    cell.typeLabel.text=info.type;
-    cell.can_need_activityLabel.text=info.can_need_activity;
+    cell.timeLabel.text=info.publishDate;
+    //cell.titleLabel.text=info.title;
+    //cell.typeLabel.text=info.type;
+    cell.can_need_activityLabel.text=[NSString stringWithFormat:@"%@(%@)",info.can_need_activity,info.type];
     cell.contentTextView.text=info.content;
     
     cell.backgroundColor=[UIColor clearColor];//必须在代码里设，只在xib设无效！！！！
+   
     //更改文字内容高度
-    cell.contentTextView.frame = CGRectMake(cell.contentTextView.frame.origin.x, cell.contentTextView.frame.origin.y, cell.contentTextView.frame.size.width, info.contentSize.height);
-    
+    cell.contentTextView.height=info.contentSize.height;
     
     
     int photoCnt=info.photoCnt;
-    int photoRow=info.photoRow;
     NSArray *photos=info.photos;
     
     //第一张图片的坐标Y
     float initPhotoY=cell.contentTextView.frame.origin.y+cell.contentTextView.frame.size.height;
-    
     int index=0;
-    //设置底部bottomBarView的Y坐标
+    //设置底部bottomBarView的Y坐标(若没有图片则就不会更新)
     float bottomBarY=cell.contentTextView.frame.origin.y+cell.contentTextView.frame.size.height+10;
     
-    //动态设置图片位置
-    for (int i=0; i<photoRow&&index<photoCnt; i++)
+    //设置图片(返回自定义的imageGridView)
+    if (photoCnt>0)
     {
-        for (int j=0; j<3&&index<photoCnt; j++)
-        {
-            UIImageView *image=[[UIImageView alloc] initWithFrame:CGRectMake((j+1)*10+j*143, (i+1)*10+i*143+initPhotoY,143 , 143)];
-            [cell.cellContentView addSubview:image];
-            //根据最后一张图片位置更新bottomBarY
-            bottomBarY=image.frame.origin.y+image.frame.size.height+10;
-            
-            [image sd_setImageWithURL:[photos objectAtIndex:index++]];
-            
-            //添加图片点击事件
-            image.userInteractionEnabled=YES;
-            
-            MITapGesture *tap=[[MITapGesture alloc] initWithTarget:cell action:@selector(tapImage:)];
-            
-            //通过tap事件传递图片数组和当前被点击图片的index
-            NSMutableDictionary *dic=[[NSMutableDictionary alloc] init];
-            [dic setValue:info.photos forKey:@"photos"];
-            [dic setValue:[NSNumber numberWithInt:index-1]  forKey:@"index"];
-            
-            tap.dic=dic;
-            [image addGestureRecognizer:tap];
-            
-        }
+        MIImageGridView *imageGridView=[[MIImageGridView alloc] initWithWidth:450 withPhotos:photos withPhotoWidth:143 withColumn:3];
+        
+        imageGridView.frame=CGRectMake(10, bottomBarY, 450, imageGridView.frame.size.height);
+        [cell.cellContentView addSubview:imageGridView];
+        
+        //更新底部bottomBarView的Y坐标
+        bottomBarY=imageGridView.frame.origin.y+imageGridView.frame.size.height+10;
         
     }
-    
-    cell.bottomBar.frame=CGRectMake(cell.bottomBar.frame.origin.x, bottomBarY, cell.bottomBar.frame.size.width,cell.bottomBar.frame.size.height );
-    
+    cell.bottomBar.y=bottomBarY;
     //求出cell仅仅内容的高度
     CGFloat cellHeight=bottomBarY+cell.bottomBar.frame.size.height;
     
     //设置仅仅contentView的高度
-    cell.cellContentView.frame=CGRectMake(cell.cellContentView.frame.origin.x, cell.cellContentView.frame.origin.y, cell.cellContentView.frame.size.width,cellHeight+10);
+    cell.cellContentView.height=cellHeight+10;
     
     //设置边框和边角
     cell.cellContentView.layer.borderColor=[UIColor grayColor].CGColor;
@@ -522,9 +509,8 @@ NSString *type=@"all";
     cell.cellContentView.layer.cornerRadius=5.0;
     
     //整个findCell的高度（其实不设置也行，高度主要在返回高度的代理方法中设置）
-    cell.frame=CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width,cellHeight+20);
-    
-    
+    cell.height=cellHeight+20;
+
     return cell;
 }
 
