@@ -12,7 +12,7 @@
 #import "MIFindController.h"
 #import "MIPublishTaskActivityController.h"
 #import "KxMenu.h"
-
+#import "UIView+cat.h"
 #import <SDWebImage/UIButton+WebCache.h>
 
 static MIViewController *mainControllerInstance=nil;
@@ -33,11 +33,52 @@ static MIViewController *mainControllerInstance=nil;
 {
     
     [super viewDidLoad];
-    _middleView=nil;
     
     [self.avatarButton sd_setImageWithURL:[NSURL URLWithString:[MIUser getInstance].avatar]  forState:UIControlStateNormal];
 
     mainControllerInstance=self;
+    
+    //左边navigatController
+    MIFindController *findController=[[MIFindController alloc] initWithNibName:@"findView" bundle:nil];
+    _leftNController=[[UINavigationController alloc] initWithRootViewController:findController];
+    //不知道为什么width要设置成244
+    _leftNController.view.x=74;
+    _leftNController.view.width=244;
+    
+    [self addChildViewController:_leftNController];
+    [self.view addSubview:_leftNController.view];
+    
+    //隐藏工具栏
+    [_leftNController setToolbarHidden:YES];
+    [_leftNController setNavigationBarHidden:YES];
+    
+    //右边navigatController
+    
+    
+    /*
+    _rightNController=[[MInavigationControllerViewController alloc] initWithNibName:@"MInavigationControllerViewController" bundle:nil];
+     */
+    
+    UIViewController *controller=[[UIViewController alloc] init];
+    controller.view.backgroundColor=[UIColor clearColor];
+    
+    _rightNController=[[UINavigationController alloc] initWithRootViewController:controller];
+    
+    //不知道为什么width要设置成244
+    _rightNController.view.x=574;
+    _rightNController.view.width=194;
+    
+    [self addChildViewController:_rightNController];
+    [self.view addSubview:_rightNController.view];
+    
+    //隐藏工具栏
+    [_rightNController setToolbarHidden:YES];
+    [_rightNController setNavigationBarHidden:YES];
+    
+    _rightNController.view.layer.shadowColor=[[UIColor blackColor] CGColor];
+    //self.view.layer.shadowOffset=CGSizeMake(-5.0, 0);//好像不加也行
+    _rightNController.view.layer.shadowRadius=5;
+    _rightNController.view.layer.shadowOpacity = 0.8;
 
 }
 
@@ -46,32 +87,17 @@ static MIViewController *mainControllerInstance=nil;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void) fadeIn
-{
-    CATransition *animation = [CATransition animation];
-    animation.delegate = self;
-    animation.duration = 0.5f ;  // 动画持续时间(秒)
-    // animation.timingFunction = UIViewAnimationCurveEaseInOut;
-    animation.type = kCATransitionFade;//淡入淡出效果
-    [[self.view layer] addAnimation:animation forKey:@"animation"];
-    
-}
 
 
 - (IBAction)findAction:(UIButton *)sender
 {
-    [_middleView removeFromSuperview];
-    [_middleController removeFromParentViewController];
     
     MIFindController *findController=[[MIFindController alloc]initWithNibName:@"findView" bundle:nil];
-    [self addChildViewController:findController];
-    UIView *findView=[findController view];
-    _middleView=findView;
-    _middleController=findController;
-    [findView setFrame:CGRectMake(74, 0, 500, 768)];
-    [self.view addSubview:_middleView];
-    [self fadeIn];
-
+    
+  
+    [_leftNController popToRootViewControllerAnimated:NO];
+   
+  
     
 }
 
@@ -125,26 +151,22 @@ static MIViewController *mainControllerInstance=nil;
 ///发布活动或任务
 -(void)publishTaskActivity:(NSString*)can_need_activity
 {
-    [_middleView removeFromSuperview];
-    [_middleController removeFromParentViewController];
-    
-    MIPublishTaskActivityController *taskController=[[MIPublishTaskActivityController alloc]initWithNibName:@"publishTaskActivityView" bundle:nil Can_need_activity:can_need_activity];
-    
-    [self addChildViewController:taskController];
-    UIView *taskView=[taskController view];
-    _middleView=taskView;
-    _middleController=taskController;
-    [taskView setFrame:CGRectMake(74, 0, 500, 768)];
-    [self.view addSubview:_middleView];
-    [self fadeIn];
+    MIPublishTaskActivityController *taController=[[MIPublishTaskActivityController alloc]initWithNibName:@"publishTaskActivityView" bundle:nil Can_need_activity:can_need_activity];
 
+        [_leftNController popViewControllerAnimated:NO];//一定要NO，不然出错(动画切太快导致错误)
+        [_leftNController pushViewController:taController animated:NO];
+
+
+    
+    
 }
 - (IBAction)tapBack:(UIControl *)sender
 {
     //如果是发布任务的controller 则取消键盘
-    if ([_middleController isKindOfClass:MIPublishTaskActivityController.class])
+    if ([_leftNController.topViewController isKindOfClass:MIPublishTaskActivityController.class])
     {
-        MIPublishTaskActivityController *pController=_middleController;
+        MIPublishTaskActivityController *pController=_leftNController.topViewController;
+        
         [pController.titleField resignFirstResponder];
         [pController.contentTextView resignFirstResponder];
         [pController.rewardTextView resignFirstResponder];
@@ -152,9 +174,12 @@ static MIViewController *mainControllerInstance=nil;
     }
     
 }
--(void)closeImageDetail
+
+- (IBAction)searchUser:(UIButton *)sender
 {
-    NSLog(@"123");
+    
+    MIPublishTaskActivityController *pc=[[MIPublishTaskActivityController alloc] initWithNibName:@"publishTaskActivityView" bundle:nil Can_need_activity:@"can"];
+    [_leftNController pushViewController:pc animated:YES];
 }
 
 @end

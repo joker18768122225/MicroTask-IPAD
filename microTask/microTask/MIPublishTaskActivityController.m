@@ -13,6 +13,7 @@
 #import "MICalendar.h"
 #import "MIHttpTool.h"
 #import "MIUser.h"
+#import "MIViewController.h"
 @implementation MIPublishTaskActivityController
 {
     int day;
@@ -32,6 +33,16 @@
         
     }
     return self;
+}
+-(void)viewWillAppear:(BOOL)animatedAppear
+{
+    //淡入
+    self.view.alpha = 0.1f;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.alpha = 1.0f;
+    }];
+    
+    
 }
 
 - (void)viewDidLoad
@@ -333,9 +344,8 @@
 
 - (IBAction)close:(UIButton *)sender
 {
-    //这样不知道好不好
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
+    [[MIViewController getInstance].leftNController popViewControllerAnimated:NO];
+  
 }
 
 ///上传任务/活动

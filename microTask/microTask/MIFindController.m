@@ -20,37 +20,55 @@
 #import "MIViewController.h"
 #import "MITAdetailController.h"
 #import "UIView+cat.h"
+#import "MIUser.h"
+#import "UIView+cat.h"
 
-///通知列表更新
 static NSString *NOTIFICATION_LOAD=@"load_task_activity";
-
-//当前table高度
-float tableHeight=0;
-///分页参数
-int page=1;
-int count=5;
-///当前回调后是否需要tableview reload（换了个类别）
-BOOL isReload=YES;
-///当前回调后是否需要tableview reload（换了个类别）
-BOOL isLoading=NO;
-///列表中所有cell信息
-NSMutableArray *cellInfos;
-///大分类
-NSString *can_need_activity=@"all";
-///小分类
-NSString *type=@"all";
-
 @implementation MIFindController
 {
     //当前选择小分类的按钮
     UIButton *chooseTypeButton;
+    ///通知列表更新
+   
+    
+    ///分页参数
+    int page;
+    int count;
+    ///当前回调后是否需要tableview reload（换了个类别）
+    BOOL isReload;
+    ///当前回调后是否需要tableview reload（换了个类别）
+    BOOL isLoading;
+    ///列表中所有cell信息
+    NSMutableArray *cellInfos;
+    ///大分类
+    NSString *can_need_activity;
+    ///小分类
+    NSString *type;
 }
 
 
+-(void)viewWillAppear:(BOOL)animatedAppear
+{
+    //淡入
+    
+    self.view.alpha = 0.1f;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.alpha = 1.0f;
+    }];
+
+}
+
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
+    //参数初始化
+    
+    page=1;
+    count=5;
+    isReload=YES;
+    isLoading=NO;
+    can_need_activity=@"all";
+    type=@"all";
     
     chooseTypeButton=self.allTypeButton;
     chooseTypeButton.enabled=NO;
@@ -69,7 +87,6 @@ NSString *type=@"all";
      selector:@selector(loadCallback:)
      name:NOTIFICATION_LOAD
      object:nil];
-    
     //初始时获取所有任务和活动
     [self reloadAll];
     
@@ -129,9 +146,9 @@ NSString *type=@"all";
     isLoading=YES;
     
     NSMutableDictionary *dic=[[NSMutableDictionary alloc] init];
-    
-    [dic setValue:[NSNumber numberWithDouble:111.11111111] forKey:@"longtitude"];
-    [dic setValue:[NSNumber numberWithDouble:22.2222222] forKey:@"latitude"];
+    [dic setValue:[MIUser getInstance].uid forKey:@"uid"];
+    [dic setValue:[NSNumber numberWithDouble:111.111111] forKey:@"longtitude"];
+    [dic setValue:[NSNumber numberWithDouble:22.222222] forKey:@"latitude"];
     [dic setValue:[NSNumber numberWithInt:page] forKey:@"page"];
     [dic setValue:[NSNumber numberWithInt:count] forKey:@"count"];
     
@@ -149,6 +166,7 @@ NSString *type=@"all";
     
     SuccessBlock success=^(AFHTTPRequestOperation *operation, id responseObject)
     {
+        NSLog(@"%@",responseObject);
         [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_LOAD object:self userInfo:responseObject];
     };
     
@@ -309,6 +327,9 @@ NSString *type=@"all";
     {
         
         //解析数据
+        
+        NSString *taid=[task_activity objectForKey:@"taid"];
+        CGFloat applycnt=[[task_activity objectForKey:@"applycnt"] doubleValue];
         NSDictionary *user= [task_activity objectForKey:@"user"];
         NSString *avatar=[user objectForKey:@"avatar"];
         NSString *nickName=[user objectForKey:@"nickname"];
@@ -324,12 +345,16 @@ NSString *type=@"all";
         NSString *content=[task_activity objectForKey:@"content"];
         NSString *reward=[task_activity objectForKey:@"reward"];
         
+        NSString *relation=[task_activity objectForKey:@"relation"];
+        
         //添加进cellInfos中
         MIFindCellInfo *cellInfo=[[MIFindCellInfo alloc]init];
+        cellInfo.taid=taid;
         cellInfo.nickName=nickName;
         cellInfo.publishDate=publishdate;
         cellInfo.expireDate=expiredate;
         cellInfo.avatar=avatar;
+        cellInfo.relation=relation;
         
         if ([can_need_activity isEqualToString:@"can"])
             cellInfo.can_need_activity=@"可以帮忙";
@@ -391,16 +416,18 @@ NSString *type=@"all";
  */
 
 
-
+//弹出任务活动详情
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     MIViewController *mainController= [MIViewController getInstance];
-    MITAdetailController *taController= [[MITAdetailController alloc] initWithNibName:@"TAdetailView" bundle:nil taInfo:[cellInfos objectAtIndex:indexPath.row]];
-    [mainController addChildViewController:taController];
-    [mainController.view addSubview:taController.view];
     
-
+    MITAdetailController *taController= [[MITAdetailController alloc] initWithNibName:@"TAdetailView" bundle:nil taInfo:[cellInfos objectAtIndex:indexPath.row]];
+    
+    [mainController.rightNController popViewControllerAnimated:NO];
+    [mainController.rightNController pushViewController:taController animated:NO];
+    
+    
+    
     
 }
 
@@ -493,12 +520,13 @@ NSString *type=@"all";
         [cell.cellContentView addSubview:imageGridView];
         
         //更新底部bottomBarView的Y坐标
-        bottomBarY=imageGridView.frame.origin.y+imageGridView.frame.size.height+10;
+        bottomBarY=imageGridView.y+imageGridView.height+10;
         
     }
     cell.bottomBar.y=bottomBarY;
+    
     //求出cell仅仅内容的高度
-    CGFloat cellHeight=bottomBarY+cell.bottomBar.frame.size.height;
+    CGFloat cellHeight=bottomBarY+cell.bottomBar.height;
     
     //设置仅仅contentView的高度
     cell.cellContentView.height=cellHeight+10;

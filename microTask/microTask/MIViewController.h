@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-
 @interface MIViewController : UIViewController
 
-@property UIView *middleView;
-@property UIViewController *middleController;
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
-
-@property (weak, nonatomic) IBOutlet UIImageView *_bgView;
+@property UINavigationController *leftNController;
+@property UINavigationController *rightNController;
 - (IBAction)findAction:(UIButton *)sender;
 - (IBAction)addAction:(UIButton *)sender;
 

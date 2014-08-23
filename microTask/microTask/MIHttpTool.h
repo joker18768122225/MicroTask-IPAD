@@ -18,8 +18,8 @@ static NSString *WEIBOLOGIN=@"http://10.82.81.156:8080/microTask/user/login.acti
 static NSString *TASK_ACTIVITY_SEARCH=@"http://10.82.81.156:8080/microTask/task_activity/search.action";
 
 static NSString *TASK_ACTIVITY_PUBLISH=@"http://10.82.81.156:8080/microTask/task_activity/publish.action";
+static NSString *TASK_ACTIVITY_APPLY=@"http://10.82.81.156:8080/microTask/task_activity/apply.action";
 
-//static NSString *TASK_ACTIVITY_PUBLISH=@"http://10.82.25.74:8080/microTask/task_activity/publish.action";
 
 @interface MIHttpTool : NSObject
 

@@ -27,6 +27,9 @@
                                 <state key="normal" image="addFriend.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JhR-dh-2oB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WQJ-Yw-GW9">
                                 <rect key="frame" x="5" y="20" width="64" height="64"/>
@@ -63,9 +66,10 @@
                             <action selector="tapBack:" destination="BYZ-38-t0r" eventType="touchDown" id="dwo-KC-7ZO"/>
                         </connections>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="_bgView" destination="P48-uq-GIE" id="EEX-Hh-bz1"/>
                         <outlet property="avatarButton" destination="WQJ-Yw-GW9" id="ugK-4L-Gah"/>
                         <outlet property="control" destination="8bC-Xf-vdC" id="elE-3z-MJd"/>
                     </connections>
@@ -214,6 +218,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oUU-CG-t0Q"/>
+        <segue reference="fkb-K5-60e"/>
     </inferredMetricsTieBreakers>
 </document>

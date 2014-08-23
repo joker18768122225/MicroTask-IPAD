@@ -12,6 +12,7 @@
 #import "MITapGesture.h"
 #import "MIViewController.h"
 #import "MIImageScrollController.h"
+#import "UIView+cat.h"
 @implementation MIImageGridView
 {
     int _photoCnt;
@@ -27,6 +28,7 @@
 -(id)initWithWidth:(float)width withPhotos:(NSArray *)photos withPhotoWidth:(float)pWidth withColumn:(int)col;
 {
     self=[super init];
+    self.backgroundColor=[UIColor clearColor];
     _photoCnt=photos.count;
     _photos=photos;
     _width=width;
@@ -40,8 +42,8 @@
     
     if (self)
     {
-         //更新imageView的高度
-        self.frame=CGRectMake(0, 0, _width, _pWidth*col+(_row-1)*10);
+         //设置imageView的frame
+        self.frame=CGRectMake(0, 0, _width, _pWidth*_row+(_row-1)*10);
 
         int index=0;
         //动态设置子view(子view里嵌套imageView)

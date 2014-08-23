@@ -10,6 +10,7 @@
 
 @interface MIFindCellInfo : NSObject
 
+@property(nonatomic) NSString *taid;
 @property(nonatomic) NSString *avatar;
 @property(nonatomic) NSString *nickName;
 @property(nonatomic) NSString *title;
@@ -21,13 +22,15 @@
 
 @property(nonatomic) NSString *content;
 @property(nonatomic) NSString *reward;
-
+@property(nonatomic) NSString *relation;
 @property(nonatomic,assign) int commentCount;
 @property(nonatomic,assign) int forwardCount;
 @property(nonatomic,assign) int likeCount;
 @property(nonatomic) NSArray *photos;
 @property(nonatomic,assign) int photoCnt;
 @property(nonatomic,assign) int photoRow;
+@property(nonatomic,assign) int applycnt;
+@property(nonatomic,assign) CGFloat distance;
 @property(nonatomic,assign) CGFloat height;
 
 @property(nonatomic) CGSize contentSize;
