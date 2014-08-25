@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MITableCollectionViewDelegate.h"
 
-@interface MIFindController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface MIFindController : UIViewController<MITableCollectionViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UIView *view;
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 
 - (IBAction)changeCan_Need_Activity:(UIButton *)sender;
@@ -19,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *can_need_activityLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *allTypeButton;
+
+
 
 @end

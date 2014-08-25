@@ -14,6 +14,7 @@
 #import "KxMenu.h"
 #import "UIView+cat.h"
 #import <SDWebImage/UIButton+WebCache.h>
+#import "MISearchUTAController.h"
 
 static MIViewController *mainControllerInstance=nil;
 @implementation MIViewController
@@ -175,11 +176,11 @@ static MIViewController *mainControllerInstance=nil;
     
 }
 
-- (IBAction)searchUser:(UIButton *)sender
+- (IBAction)searchUTA:(UIButton *)sender
 {
     
-    MIPublishTaskActivityController *pc=[[MIPublishTaskActivityController alloc] initWithNibName:@"publishTaskActivityView" bundle:nil Can_need_activity:@"can"];
-    [_leftNController pushViewController:pc animated:YES];
+    MISearchUTAController *sc=[[MISearchUTAController alloc] initWithNibName:@"searchUTAView" bundle:nil];
+    [_leftNController pushViewController:sc animated:NO];
 }
 
 @end

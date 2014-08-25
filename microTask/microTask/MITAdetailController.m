@@ -65,7 +65,7 @@
 {
      //滑入
     self.view.x=450;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.view.x=0;
     }];
 }
@@ -76,13 +76,13 @@
     _nickNameLabel.text=_info.nickName;
     
     //游客或已申请
-    if ([_info.relation isEqualToString:@"apply"])
+    if ([_info.my_relation isEqualToString:@"apply"])
     {
         [_applyButton setHighlighted:YES];
         [_applyButton setTitle:@"取消申请" forState:UIControlStateNormal];
     }
     
-    else if([_info.relation isEqualToString:@"publish"])
+    else if([_info.my_relation isEqualToString:@"publish"])
         _applyButton.hidden=YES;
     else
         [_applyButton setTitle:@"申请" forState:UIControlStateNormal];
@@ -160,7 +160,7 @@
 - (IBAction)close:(UIButton *)sender
 {
     //滑出
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.view.x=450;
         //动画结束回调
     } completion:^(BOOL finished) {

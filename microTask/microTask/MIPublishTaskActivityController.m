@@ -56,7 +56,6 @@
     self.imageTableView.contentSize=CGSizeMake(410, 0);
     self.imageTableView.layer.borderColor=self.contentTextView.layer.borderColor=[UIColor grayColor].CGColor;
     self.imageTableView.layer.borderWidth=self.contentTextView.layer.borderWidth=0.2;
-    self.imageTableView.layer.cornerRadius=self.contentTextView.layer.cornerRadius=5.0;
     
     //旋转图片列表
     self.imageTableView.transform = CGAffineTransformMakeRotation(-M_PI / 2);
@@ -342,11 +341,6 @@
  
 }
 
-- (IBAction)close:(UIButton *)sender
-{
-    [[MIViewController getInstance].leftNController popViewControllerAnimated:NO];
-  
-}
 
 ///上传任务/活动
 - (IBAction)submit:(UIButton *)sender

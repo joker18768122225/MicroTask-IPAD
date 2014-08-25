@@ -6,9 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIFindController">
             <connections>
+                <outlet property="_contentView" destination="5qh-4E-GGU" id="Ijz-zj-WdW"/>
                 <outlet property="allTypeButton" destination="68F-sM-n6r" id="cbd-iA-uNk"/>
                 <outlet property="can_need_activityLabel" destination="K3V-z4-082" id="CG5-t3-Gch"/>
-                <outlet property="tableView" destination="rwx-dn-nqd" id="bdB-qa-Yqk"/>
                 <outlet property="topBarView" destination="1Qp-dv-oDM" id="Jpf-xy-laC"/>
                 <outlet property="view" destination="ddm-FV-wXz" id="nvH-So-Um1"/>
             </connections>
@@ -111,19 +111,13 @@
                     <color key="backgroundColor" red="0.9710650090651799" green="0.96961773796309958" blue="0.99489795918367352" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rwx-dn-nqd">
+                <view contentMode="scaleToFill" id="5qh-4E-GGU">
                     <rect key="frame" x="0.0" y="64" width="500" height="704"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.5" colorSpace="calibratedRGB"/>
-                    <color key="sectionIndexBackgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.5" colorSpace="calibratedRGB"/>
-                    <color key="sectionIndexTrackingBackgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.5" colorSpace="calibratedRGB"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="4iv-d8-PQf"/>
-                        <outlet property="delegate" destination="-1" id="61j-xf-php"/>
-                    </connections>
-                </tableView>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.5" colorSpace="calibratedRGB"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>

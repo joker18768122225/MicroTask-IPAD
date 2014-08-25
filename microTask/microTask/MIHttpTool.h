@@ -14,11 +14,17 @@
 typedef void (^SuccessBlock)(AFHTTPRequestOperation *operation, id responseObject) ;
 typedef void (^ErrorBlock)(AFHTTPRequestOperation *operation, NSError *error);
 
+//注册&登录
 static NSString *WEIBOLOGIN=@"http://10.82.81.156:8080/microTask/user/login.action";
-static NSString *TASK_ACTIVITY_SEARCH=@"http://10.82.81.156:8080/microTask/task_activity/search.action";
 
+//任务&活动
 static NSString *TASK_ACTIVITY_PUBLISH=@"http://10.82.81.156:8080/microTask/task_activity/publish.action";
+static NSString *TASK_ACTIVITY_FINDNEAR=@"http://10.82.81.156:8080/microTask/task_activity/search.action";
+static NSString *TASK_ACTIVITY_FINDBYTITLE=@"http://10.82.81.156:8080/microTask/task_activity/findbytitle.action";
 static NSString *TASK_ACTIVITY_APPLY=@"http://10.82.81.156:8080/microTask/task_activity/apply.action";
+
+//用户
+static NSString *USER_SEARCH_BY_NICKNAME=@"http://10.82.81.156:8080/microTask/user/search.action";
 
 
 @interface MIHttpTool : NSObject

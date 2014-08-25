@@ -9,9 +9,12 @@
 #import "MIImageScrollController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MIImageScaleUtil.h"
+#import "UIView+cat.h"
+#import "MIPoint.h"
 @interface MIImageScrollController ()
 {
     NSArray *_photos;//图片url数组
+    NSArray *_points;//缩略图小对于屏幕的坐标
     int _curIndex;//记录当前显示图片的下标
     int _count;
     NSMutableArray *_views;//scrollView的子view，这个子view里放imageView
@@ -23,7 +26,7 @@
 
 
 ///注意关于view的设置不要放在这里！！
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withPhotos:(NSArray*)photos withInitIndex:(int)index
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withPhotos:(NSArray*)photos withInitIndex:(int)index withPoints:(NSArray*)points
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
@@ -31,6 +34,7 @@
         _photos=photos;
         _curIndex=index;
         _count=_photos.count;
+        _points=points;
         
     }
     return self;
@@ -39,9 +43,27 @@
 ///点击关闭
 -(void)tap
 {
-    //注意要先移除view再移除controller
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
+    self.view.backgroundColor=[UIColor clearColor];
+    UIView *view=[_views objectAtIndex:_curIndex];
+    view.backgroundColor=[UIColor clearColor];
+    //图片view
+    view=[view viewWithTag:0];
+    CGAffineTransform transform=CGAffineTransformScale(view.transform, 0.1, 0.1);
+    //获取缩略图坐标
+    MIPoint *mypoint=[_points objectAtIndex:_curIndex];
+    CGPoint point=CGPointMake(mypoint.x, mypoint.y);
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        //view.center=point;
+        view.transform=transform;
+    } completion:^(BOOL finished) {
+        //注意要先移除view再移除controller
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+
+    }];
+    
+    
     
 }
 //不能添加手势会冲突
@@ -87,6 +109,7 @@
         UIImageView *imageDetailView=[[UIImageView alloc] init];
         [MIImageScaleUtil setImageScaleAndContent:CGSizeMake(1024, 768) imageView:imageDetailView photoUrl:[_photos objectAtIndex:i]];
         
+        imageDetailView.tag=0;
         [view addSubview:imageDetailView];
         
         //添加底部label
@@ -138,9 +161,8 @@
 ///控制scrollView拖动停止时，即手指离开时，滚向最近的一张图片
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
+    /*
     NSLog(@"velocity:%f",velocity.x);
-    
-    
     // velocity.x=100;
     //速度大于1.0则直接翻页
     if (fabs(velocity.x)>1.0)
@@ -169,8 +191,6 @@
         
     }
     
-    
-    
     int mod=(int)scrollView.contentOffset.x%1024;
     //当前图片有大于一半的部分可见(则停留在该图片)
     
@@ -189,7 +209,7 @@
         }
     }
     
-    
+    */
 }
 
 

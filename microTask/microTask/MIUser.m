@@ -21,7 +21,7 @@ static MIUser* instance=nil;
     }
     return instance;
 }
-+(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile;
++(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile withFollowercnt:(int)followercnt withFollowcnt:(int)followcnt withUniversity:(NSString*)university withDepartment:(NSString*)department
 {
     instance=[[MIUser alloc] init];
     instance->_uid=uid;
@@ -30,6 +30,10 @@ static MIUser* instance=nil;
     instance->_avatar=avatar;
     instance->_credit=credit;
     instance->_mobile=mobile;
+    instance->_followcnt=followcnt;
+    instance->_followercnt=followercnt;
+    instance->_department=department;
+    instance->_university=university;
 }
 
 -(NSString *)description

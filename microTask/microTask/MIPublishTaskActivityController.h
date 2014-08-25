@@ -44,7 +44,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *can_need_activityLabel;
 - (IBAction)addPhoto:(UIButton *)sender;
 
-- (IBAction)close:(UIButton *)sender;
 - (IBAction)submit:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextView *rewardTextView;
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextView;

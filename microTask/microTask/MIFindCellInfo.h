@@ -22,7 +22,8 @@
 
 @property(nonatomic) NSString *content;
 @property(nonatomic) NSString *reward;
-@property(nonatomic) NSString *relation;
+@property(nonatomic) NSString *my_relation;
+@property(nonatomic) NSString *friend_relation;
 @property(nonatomic,assign) int commentCount;
 @property(nonatomic,assign) int forwardCount;
 @property(nonatomic,assign) int likeCount;

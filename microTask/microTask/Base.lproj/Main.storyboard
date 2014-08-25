@@ -24,11 +24,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vVz-L3-8EK">
                                 <rect key="frame" x="17" y="266" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="addFriend.png">
+                                <state key="normal" image="find.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JhR-dh-2oB"/>
+                                    <action selector="searchUTA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDv-ee-zop"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WQJ-Yw-GW9">
@@ -41,7 +41,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EFV-cq-XZ9">
                                 <rect key="frame" x="17" y="123" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="findTaskActivity.png">
+                                <state key="normal" image="homepage.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -201,10 +201,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addFriend.png" width="256" height="256"/>
         <image name="addTaskActivity.png" width="256" height="256"/>
         <image name="avatar.tiff" width="192" height="190"/>
-        <image name="findTaskActivity.png" width="128" height="128"/>
+        <image name="find.png" width="128" height="128"/>
+        <image name="homepage.png" width="128" height="128"/>
         <image name="loginBG.jpg" width="1024" height="768"/>
         <image name="loginField.png" width="400" height="140"/>
         <image name="mainBG.jpg" width="1024" height="768"/>

@@ -25,13 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //注册登录通知
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(forwardToMain:)
-     name:@"login"//表示消息名称，发送跟接收双方都要一致
-     object:nil];
  
 }
 
@@ -60,15 +53,12 @@
 }
 
 //接收通知的方法
--(void)forwardToMain:(NSNotification*) notification
+-(void)forwardToMain:(NSDictionary*) dic
 {
     
-    
-    NSLog(@"收到登录通知");
     //跳转到主界面
-    NSDictionary *userInfo=[notification userInfo];
 
-    if (userInfo==nil)
+    if (dic==nil)
     {
         UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"网络请求错误" message:@"请检查网络连接!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         
@@ -76,21 +66,19 @@
         [self._weiboLoginButton setEnabled:YES];
         
     }
-    else if([[userInfo objectForKey:@"status"] isEqualToString:@"success"])
+    else if([[dic objectForKey:@"status"] isEqualToString:@"success"])
     {
-        //移除通知
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"wlogin" object:nil];
         
-        NSDictionary *userDic=[userInfo objectForKey:@"user"];
+        NSDictionary *userDic=[dic objectForKey:@"user"];
         
         //初始化用户实例
-        [MIUser initWithUid:[userDic objectForKey:@"uid"] withNickName:[userDic objectForKey:@"nickname"] withGender:[userDic objectForKey:@"gender"] withAvatar:[userDic objectForKey:@"avatar"] withProfile:[userDic objectForKey:@"profile"] withCredit:[[userDic objectForKey:@"credit"] intValue] withMobile:[userDic objectForKey:@"mobile"]];
+        [MIUser initWithUid:[userDic objectForKey:@"uid"] withNickName:[userDic objectForKey:@"nickname"] withGender:[userDic objectForKey:@"gender"] withAvatar:[userDic objectForKey:@"avatar"] withProfile:[userDic objectForKey:@"profile"] withCredit:[[userDic objectForKey:@"credit"] intValue] withMobile:[userDic objectForKey:@"mobile"] withFollowercnt:[[userDic objectForKey:@"followercnt"] intValue] withFollowcnt:[[userDic objectForKey:@"followcnt"] intValue] withUniversity:[userDic objectForKey:@"university"] withDepartment:[userDic objectForKey:@"department"]];
         
         NSLog(@"%@",[MIUser getInstance]);
         
         [self performSegueWithIdentifier:@"LoginToMain" sender:self];
     }
-    else if ([[userInfo objectForKey:@"status"] isEqualToString:@"error"])
+    else if ([[dic objectForKey:@"status"] isEqualToString:@"error"])
     {
         UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"登录失败" message:@"未知原因!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         
@@ -121,7 +109,8 @@
     
     SuccessBlock success=^(AFHTTPRequestOperation *operation, id responseObject)
     {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:self userInfo:responseObject];
+         NSLog(@"%@",responseObject);
+        [self forwardToMain:responseObject];
         
     };
     ErrorBlock error=^(AFHTTPRequestOperation *operation, NSError *error)

@@ -14,6 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withPhotos:(NSArray*)photos withInitIndex:(int)index;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withPhotos:(NSArray*)photos withInitIndex:(int)index withPoints:(NSArray*)points;
 
 @end

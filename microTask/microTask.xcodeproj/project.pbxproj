@@ -43,6 +43,14 @@
 		DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD578E11198F9EE900C47D56 /* MILoginController.m */; };
 		DD578E22198FCBA400C47D56 /* loginField.png in Resources */ = {isa = PBXBuildFile; fileRef = DD578E21198FCBA400C47D56 /* loginField.png */; };
 		DD58394C1991E90700ED9BBA /* MIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DD58394B1991E90700ED9BBA /* MIUser.m */; };
+		DD590A4C19A998AC00B2D09A /* MIPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD590A4B19A998AC00B2D09A /* MIPoint.m */; };
+		DD590A4E19A9C31A00B2D09A /* homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = DD590A4D19A9C31A00B2D09A /* homepage.png */; };
+		DD590A5419A9C5B100B2D09A /* searchUTAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD590A5319A9C5B100B2D09A /* searchUTAView.xib */; };
+		DD590A5919A9D88000B2D09A /* MIUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD590A5819A9D88000B2D09A /* MIUserCell.m */; };
+		DD590A5B19A9D89C00B2D09A /* userCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD590A5A19A9D89C00B2D09A /* userCellView.xib */; };
+		DD590A5E19A9DAF100B2D09A /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = DD590A5C19A9DAF100B2D09A /* boy.png */; };
+		DD590A5F19A9DAF100B2D09A /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = DD590A5D19A9DAF100B2D09A /* girl.png */; };
+		DD590A6419A9F07800B2D09A /* MISearchUTAController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD590A5119A9C58C00B2D09A /* MISearchUTAController.m */; };
 		DD5DF71C199674C200D2CD30 /* FindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5DF71B199674C200D2CD30 /* FindCell.xib */; };
 		DD63BAD31994E88F007FEB06 /* publishTaskActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD63BAD21994E88F007FEB06 /* publishTaskActivityView.xib */; };
 		DD63BAD91994F7F9007FEB06 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63BAD81994F7F9007FEB06 /* KxMenu.m */; };
@@ -50,7 +58,6 @@
 		DD63BAE319950F7C007FEB06 /* MIFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63BAE219950F7C007FEB06 /* MIFindController.m */; };
 		DD675E4619A258100068F9DF /* addFriend.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4319A258100068F9DF /* addFriend.png */; };
 		DD675E4719A258100068F9DF /* addTaskActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4419A258100068F9DF /* addTaskActivity.png */; };
-		DD675E4819A258100068F9DF /* findTaskActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4519A258100068F9DF /* findTaskActivity.png */; };
 		DD675E4A19A25A210068F9DF /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4919A25A210068F9DF /* cancel.png */; };
 		DD675E4E19A25E4A0068F9DF /* middleBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4D19A25E4A0068F9DF /* middleBG.png */; };
 		DD8AEC051990BB4900E5795B /* QQConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AEBEA1990BB4900E5795B /* QQConnection.framework */; };
@@ -101,6 +108,10 @@
 		DDA2497319A32FC10049FC0E /* all.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497219A32FC10049FC0E /* all.png */; };
 		DDA2497519A332060049FC0E /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497419A332060049FC0E /* group.png */; };
 		DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */; };
+		DDB9DD0C19AB19A100EB9D63 /* MITaskActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */; };
+		DDB9DD0D19AB19A100EB9D63 /* MITaskActivityTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */; };
+		DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */; };
+		DDB9DD1419AB36A200EB9D63 /* MIUserCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */; };
 		DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBC70B819A0486D0078371E /* MIHttpTool.m */; };
 		DDCC197D19A78B3C00FB4D65 /* UIView+cat.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */; };
 		DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEE1995F20F008D4388 /* MIFindCell.m */; };
@@ -234,6 +245,17 @@
 		DD578E21198FCBA400C47D56 /* loginField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginField.png; sourceTree = "<group>"; };
 		DD58394A1991E90700ED9BBA /* MIUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUser.h; sourceTree = "<group>"; };
 		DD58394B1991E90700ED9BBA /* MIUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUser.m; sourceTree = "<group>"; };
+		DD590A4A19A998AC00B2D09A /* MIPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPoint.h; sourceTree = "<group>"; };
+		DD590A4B19A998AC00B2D09A /* MIPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPoint.m; sourceTree = "<group>"; };
+		DD590A4D19A9C31A00B2D09A /* homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homepage.png; sourceTree = "<group>"; };
+		DD590A5019A9C58C00B2D09A /* MISearchUTAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MISearchUTAController.h; sourceTree = "<group>"; };
+		DD590A5119A9C58C00B2D09A /* MISearchUTAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MISearchUTAController.m; sourceTree = "<group>"; };
+		DD590A5319A9C5B100B2D09A /* searchUTAView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchUTAView.xib; sourceTree = "<group>"; };
+		DD590A5719A9D88000B2D09A /* MIUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserCell.h; sourceTree = "<group>"; };
+		DD590A5819A9D88000B2D09A /* MIUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserCell.m; sourceTree = "<group>"; };
+		DD590A5A19A9D89C00B2D09A /* userCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userCellView.xib; sourceTree = "<group>"; };
+		DD590A5C19A9DAF100B2D09A /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
+		DD590A5D19A9DAF100B2D09A /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		DD5DF71B199674C200D2CD30 /* FindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCell.xib; sourceTree = "<group>"; };
 		DD63BAD21994E88F007FEB06 /* publishTaskActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = publishTaskActivityView.xib; sourceTree = "<group>"; };
 		DD63BAD71994F7F9007FEB06 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
@@ -243,7 +265,6 @@
 		DD63BAE219950F7C007FEB06 /* MIFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindController.m; sourceTree = "<group>"; };
 		DD675E4319A258100068F9DF /* addFriend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addFriend.png; sourceTree = "<group>"; };
 		DD675E4419A258100068F9DF /* addTaskActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addTaskActivity.png; sourceTree = "<group>"; };
-		DD675E4519A258100068F9DF /* findTaskActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findTaskActivity.png; sourceTree = "<group>"; };
 		DD675E4919A25A210068F9DF /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		DD675E4D19A25E4A0068F9DF /* middleBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleBG.png; sourceTree = "<group>"; };
 		DD8AEBEA1990BB4900E5795B /* QQConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQConnection.framework; sourceTree = "<group>"; };
@@ -309,6 +330,13 @@
 		DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCellInfo.m; sourceTree = "<group>"; };
 		DDB63DED1995F20F008D4388 /* MIFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFindCell.h; sourceTree = "<group>"; };
 		DDB63DEE1995F20F008D4388 /* MIFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCell.m; sourceTree = "<group>"; };
+		DDB9DD0919AB19A100EB9D63 /* MITaskActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITaskActivityTableViewController.h; sourceTree = "<group>"; };
+		DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITaskActivityTableViewController.m; sourceTree = "<group>"; };
+		DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MITaskActivityTableViewController.xib; sourceTree = "<group>"; };
+		DDB9DD0E19AB220700EB9D63 /* MITableCollectionViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MITableCollectionViewDelegate.h; sourceTree = "<group>"; };
+		DDB9DD1019AB36A200EB9D63 /* MIUserCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserCollectionViewController.h; sourceTree = "<group>"; };
+		DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserCollectionViewController.m; sourceTree = "<group>"; };
+		DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUserCollectionViewController.xib; sourceTree = "<group>"; };
 		DDBC70B719A0486D0078371E /* MIHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHttpTool.h; sourceTree = "<group>"; };
 		DDBC70B819A0486D0078371E /* MIHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHttpTool.m; sourceTree = "<group>"; };
 		DDCC197B19A78B3C00FB4D65 /* UIView+cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+cat.h"; sourceTree = "<group>"; };
@@ -378,68 +406,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD0A134219A71DFE00D38D04 /* search table */ = {
-			isa = PBXGroup;
-			children = (
-				DD63BADE19950EB4007FEB06 /* findView.xib */,
-				DD5DF71B199674C200D2CD30 /* FindCell.xib */,
-				DD63BAE119950F7C007FEB06 /* MIFindController.h */,
-				DD63BAE219950F7C007FEB06 /* MIFindController.m */,
-				DDB63DEA1995ECC5008D4388 /* MIFindCellInfo.h */,
-				DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */,
-				DDB63DEE1995F20F008D4388 /* MIFindCell.m */,
-				DDB63DED1995F20F008D4388 /* MIFindCell.h */,
-			);
-			name = "search table";
-			sourceTree = "<group>";
-		};
-		DD0A134319A71E1B00D38D04 /* detail info */ = {
+		DD0A134319A71E1B00D38D04 /* 任务活动详情 */ = {
 			isa = PBXGroup;
 			children = (
 				DD0A134419A71E4800D38D04 /* MITAdetailController.h */,
 				DD0A134519A71E4800D38D04 /* MITAdetailController.m */,
 				DD0A134619A71E4800D38D04 /* TAdetailView.xib */,
 			);
-			name = "detail info";
+			name = "任务活动详情";
 			sourceTree = "<group>";
 		};
 		DD0A134919A733C500D38D04 /* imageGridView */ = {
 			isa = PBXGroup;
 			children = (
-				DD0A133F19A71DB100D38D04 /* MITapGesture.h */,
-				DD0A134019A71DB100D38D04 /* MITapGesture.m */,
 				DD0A134A19A733EB00D38D04 /* MIImageGridView.h */,
 				DD0A134B19A733EB00D38D04 /* MIImageGridView.m */,
 				DD0A134D19A7395B00D38D04 /* MIImageScaleUtil.h */,
 				DD0A134E19A7395B00D38D04 /* MIImageScaleUtil.m */,
+				DD590A4A19A998AC00B2D09A /* MIPoint.h */,
+				DD590A4B19A998AC00B2D09A /* MIPoint.m */,
 			);
 			name = imageGridView;
 			sourceTree = "<group>";
 		};
-		DD111B50199E50A500D0ED2C /* publish task&activity */ = {
+		DD111B50199E50A500D0ED2C /* 发布任务 */ = {
 			isa = PBXGroup;
 			children = (
 				DD63BAD21994E88F007FEB06 /* publishTaskActivityView.xib */,
 				DD4295001997422F001756EE /* MIPublishTaskActivityController.h */,
 				DD4295011997422F001756EE /* MIPublishTaskActivityController.m */,
-				DD0C8531199791E800B4EA3B /* MYButton.h */,
-				DD0C8532199791E800B4EA3B /* MYButton.m */,
 			);
-			name = "publish task&activity";
+			name = "发布任务";
 			sourceTree = "<group>";
 		};
-		DD111B54199E53F400D0ED2C /* find task&activity */ = {
+		DD111B54199E53F400D0ED2C /* 附近任务活动查询 */ = {
 			isa = PBXGroup;
 			children = (
-				DD0A134319A71E1B00D38D04 /* detail info */,
-				DD0A134219A71DFE00D38D04 /* search table */,
+				DD63BADE19950EB4007FEB06 /* findView.xib */,
+				DD63BAE119950F7C007FEB06 /* MIFindController.h */,
+				DD63BAE219950F7C007FEB06 /* MIFindController.m */,
 			);
-			name = "find task&activity";
+			name = "附近任务活动查询";
 			sourceTree = "<group>";
 		};
 		DD298C1119A095BC004BFC65 /* UIUtil */ = {
 			isa = PBXGroup;
 			children = (
+				DDD125E619AB69B3004EDD70 /* myTapGesture */,
+				DDD125E519AB698F004EDD70 /* myButton */,
 				DD0A134919A733C500D38D04 /* imageGridView */,
 				DDFE316919A620F700A0CE41 /* imageScrollController */,
 				DD63BAD61994F7E7007FEB06 /* KxMenu */,
@@ -501,17 +515,22 @@
 		DD494F0A198F8F08009641C3 /* microTask */ = {
 			isa = PBXGroup;
 			children = (
+				DDBC70B619A0484C0078371E /* uitility */,
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
 				DD111B4E199E35BD00D0ED2C /* MIProperties.m */,
 				DD494F16198F8F08009641C3 /* Main.storyboard */,
-				DDBC70B619A0484C0078371E /* uitility */,
-				DDF0FDC7199880FA00712B27 /* login&register */,
-				DD63BABE1994CD67007FEB06 /* main */,
-				DD111B54199E53F400D0ED2C /* find task&activity */,
-				DD111B50199E50A500D0ED2C /* publish task&activity */,
-				DD5839491991E8EC00ED9BBA /* entity */,
+				DDB9DD1519AB37AD00EB9D63 /* protocol */,
+				DD0A134319A71E1B00D38D04 /* 任务活动详情 */,
+				DDB9DD0F19AB364400EB9D63 /* 用户昵昵称搜索列表 */,
+				DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */,
+				DD590A4F19A9C51C00B2D09A /* 用户昵称 任务活动主题搜索 */,
+				DDF0FDC7199880FA00712B27 /* 注册&登录 */,
+				DD63BABE1994CD67007FEB06 /* 主界面 */,
+				DD111B54199E53F400D0ED2C /* 附近任务活动查询 */,
+				DD111B50199E50A500D0ED2C /* 发布任务 */,
+				DD5839491991E8EC00ED9BBA /* 实体类 */,
 				DD578E1C198FB3E800C47D56 /* image */,
 				DD494F1C198F8F09009641C3 /* Images.xcassets */,
 				DD494F0B198F8F08009641C3 /* Supporting Files */,
@@ -645,6 +664,8 @@
 		DD578E1C198FB3E800C47D56 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				DD590A5C19A9DAF100B2D09A /* boy.png */,
+				DD590A5D19A9DAF100B2D09A /* girl.png */,
 				DD8DFE3219A0FA6300FD7C0F /* background */,
 				DD8DFE3619A0FA6300FD7C0F /* button */,
 				DD8DFE4819A0FA6300FD7C0F /* time.png */,
@@ -653,22 +674,32 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		DD5839491991E8EC00ED9BBA /* entity */ = {
+		DD5839491991E8EC00ED9BBA /* 实体类 */ = {
 			isa = PBXGroup;
 			children = (
 				DD58394A1991E90700ED9BBA /* MIUser.h */,
 				DD58394B1991E90700ED9BBA /* MIUser.m */,
 			);
-			name = entity;
+			name = "实体类";
 			sourceTree = "<group>";
 		};
-		DD63BABE1994CD67007FEB06 /* main */ = {
+		DD590A4F19A9C51C00B2D09A /* 用户昵称 任务活动主题搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				DD590A5019A9C58C00B2D09A /* MISearchUTAController.h */,
+				DD590A5119A9C58C00B2D09A /* MISearchUTAController.m */,
+				DD590A5319A9C5B100B2D09A /* searchUTAView.xib */,
+			);
+			name = "用户昵称 任务活动主题搜索";
+			sourceTree = "<group>";
+		};
+		DD63BABE1994CD67007FEB06 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
 				DD494F19198F8F09009641C3 /* MIViewController.h */,
 				DD494F1A198F8F09009641C3 /* MIViewController.m */,
 			);
-			name = main;
+			name = "主界面";
 			sourceTree = "<group>";
 		};
 		DD63BAD61994F7E7007FEB06 /* KxMenu */ = {
@@ -816,6 +847,7 @@
 		DD8DFE3619A0FA6300FD7C0F /* button */ = {
 			isa = PBXGroup;
 			children = (
+				DD590A4D19A9C31A00B2D09A /* homepage.png */,
 				DD4FC48C19A8B95000C4706C /* apply.png */,
 				DDA2497419A332060049FC0E /* group.png */,
 				DDA2497219A32FC10049FC0E /* all.png */,
@@ -825,7 +857,6 @@
 				DD675E4919A25A210068F9DF /* cancel.png */,
 				DD675E4319A258100068F9DF /* addFriend.png */,
 				DD675E4419A258100068F9DF /* addTaskActivity.png */,
-				DD675E4519A258100068F9DF /* findTaskActivity.png */,
 				DD8DFE3919A0FA6300FD7C0F /* add2.png */,
 				DD8DFE3A19A0FA6300FD7C0F /* avatar.tiff */,
 				DD8DFE3C19A0FA6300FD7C0F /* chooseGroup.png */,
@@ -844,6 +875,42 @@
 			path = button;
 			sourceTree = "<group>";
 		};
+		DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB63DEA1995ECC5008D4388 /* MIFindCellInfo.h */,
+				DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */,
+				DDB63DEE1995F20F008D4388 /* MIFindCell.m */,
+				DDB63DED1995F20F008D4388 /* MIFindCell.h */,
+				DD5DF71B199674C200D2CD30 /* FindCell.xib */,
+				DDB9DD0919AB19A100EB9D63 /* MITaskActivityTableViewController.h */,
+				DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */,
+				DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */,
+			);
+			name = "任务活动搜索列表";
+			sourceTree = "<group>";
+		};
+		DDB9DD0F19AB364400EB9D63 /* 用户昵昵称搜索列表 */ = {
+			isa = PBXGroup;
+			children = (
+				DD590A5719A9D88000B2D09A /* MIUserCell.h */,
+				DD590A5819A9D88000B2D09A /* MIUserCell.m */,
+				DD590A5A19A9D89C00B2D09A /* userCellView.xib */,
+				DDB9DD1019AB36A200EB9D63 /* MIUserCollectionViewController.h */,
+				DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */,
+				DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */,
+			);
+			name = "用户昵昵称搜索列表";
+			sourceTree = "<group>";
+		};
+		DDB9DD1519AB37AD00EB9D63 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DDB9DD0E19AB220700EB9D63 /* MITableCollectionViewDelegate.h */,
+			);
+			name = protocol;
+			sourceTree = "<group>";
+		};
 		DDBC70B619A0484C0078371E /* uitility */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,7 +921,25 @@
 			name = uitility;
 			sourceTree = "<group>";
 		};
-		DDF0FDC7199880FA00712B27 /* login&register */ = {
+		DDD125E519AB698F004EDD70 /* myButton */ = {
+			isa = PBXGroup;
+			children = (
+				DD0C8531199791E800B4EA3B /* MYButton.h */,
+				DD0C8532199791E800B4EA3B /* MYButton.m */,
+			);
+			name = myButton;
+			sourceTree = "<group>";
+		};
+		DDD125E619AB69B3004EDD70 /* myTapGesture */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A133F19A71DB100D38D04 /* MITapGesture.h */,
+				DD0A134019A71DB100D38D04 /* MITapGesture.m */,
+			);
+			name = myTapGesture;
+			sourceTree = "<group>";
+		};
+		DDF0FDC7199880FA00712B27 /* 注册&登录 */ = {
 			isa = PBXGroup;
 			children = (
 				DD578E10198F9EE900C47D56 /* MILoginController.h */,
@@ -863,7 +948,7 @@
 				DDF0FDC31998806200712B27 /* MIRegisterController.m */,
 				DDF0FDC51998808000712B27 /* registerView.xib */,
 			);
-			name = "login&register";
+			name = "注册&登录";
 			sourceTree = "<group>";
 		};
 		DDF82C6019A1BAE900F1FE83 /* HttpUtil */ = {
@@ -979,6 +1064,7 @@
 				DD4FC48D19A8B95000C4706C /* apply.png in Resources */,
 				DD0A134819A71E4800D38D04 /* TAdetailView.xib in Resources */,
 				DDFE317119A6246000A0CE41 /* imageScrollView.xib in Resources */,
+				DDB9DD1419AB36A200EB9D63 /* MIUserCollectionViewController.xib in Resources */,
 				DDF0FDC61998808000712B27 /* registerView.xib in Resources */,
 				DD8DFE5919A0FA6300FD7C0F /* point.png in Resources */,
 				DD494F7D198F9217009641C3 /* readme.txt in Resources */,
@@ -988,6 +1074,7 @@
 				DD8DFE5119A0FA6300FD7C0F /* chooseGroup.png in Resources */,
 				DD675E4619A258100068F9DF /* addFriend.png in Resources */,
 				DDA2496F19A3292E0049FC0E /* entertainment.png in Resources */,
+				DD590A5419A9C5B100B2D09A /* searchUTAView.xib in Resources */,
 				DD8DFE5319A0FA6300FD7C0F /* confirm.png in Resources */,
 				DD494F1D198F8F09009641C3 /* Images.xcassets in Resources */,
 				DDA2497019A3292E0049FC0E /* life.png in Resources */,
@@ -1004,12 +1091,15 @@
 				DD8DFE5A19A0FA6300FD7C0F /* qqLogin.png in Resources */,
 				DD494F7C198F9217009641C3 /* mapapi.bundle in Resources */,
 				DD494F0F198F8F08009641C3 /* InfoPlist.strings in Resources */,
+				DD590A4E19A9C31A00B2D09A /* homepage.png in Resources */,
+				DDB9DD0D19AB19A100EB9D63 /* MITaskActivityTableViewController.xib in Resources */,
+				DD590A5F19A9DAF100B2D09A /* girl.png in Resources */,
 				DDA2497519A332060049FC0E /* group.png in Resources */,
+				DD590A5B19A9D89C00B2D09A /* userCellView.xib in Resources */,
 				DD8AEC0E1990BB4900E5795B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				DD8DFE5719A0FA6300FD7C0F /* phoneLogin.png in Resources */,
 				DD675E4719A258100068F9DF /* addTaskActivity.png in Resources */,
 				DD494F18198F8F08009641C3 /* Main.storyboard in Resources */,
-				DD675E4819A258100068F9DF /* findTaskActivity.png in Resources */,
 				DD8DFE5819A0FA6300FD7C0F /* photo.png in Resources */,
 				DD8AEC131990BB4900E5795B /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
 				DD8AEC0A1990BB4900E5795B /* ShareSDKLocalizable.strings in Resources */,
@@ -1021,6 +1111,7 @@
 				DD8AEC101990BB4900E5795B /* WeiboSDK.bundle in Resources */,
 				DD578E22198FCBA400C47D56 /* loginField.png in Resources */,
 				DD8DFE4E19A0FA6300FD7C0F /* add2.png in Resources */,
+				DD590A5E19A9DAF100B2D09A /* boy.png in Resources */,
 				DD8DFE4F19A0FA6300FD7C0F /* avatar.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1078,13 +1169,18 @@
 				DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */,
 				DD494F15198F8F08009641C3 /* MIAppDelegate.m in Sources */,
 				DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */,
+				DD590A4C19A998AC00B2D09A /* MIPoint.m in Sources */,
+				DD590A5919A9D88000B2D09A /* MIUserCell.m in Sources */,
 				DD63BAE319950F7C007FEB06 /* MIFindController.m in Sources */,
 				DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */,
 				DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */,
+				DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */,
 				DD58394C1991E90700ED9BBA /* MIUser.m in Sources */,
 				DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */,
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,
 				DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */,
+				DD590A6419A9F07800B2D09A /* MISearchUTAController.m in Sources */,
+				DDB9DD0C19AB19A100EB9D63 /* MITaskActivityTableViewController.m in Sources */,
 				DDFE316F19A6234B00A0CE41 /* MIImageScrollController.m in Sources */,
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
 				DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */,

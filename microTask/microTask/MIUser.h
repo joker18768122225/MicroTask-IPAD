@@ -14,12 +14,16 @@
 @property(nonatomic) NSString *gender;
 @property(nonatomic) NSString *avatar;
 @property(nonatomic) NSString *profile;
-@property(nonatomic,assign) int credit;
 @property(nonatomic) NSString *mobile;
+@property(nonatomic) NSString *university;
+@property(nonatomic) NSString *department;
+@property(nonatomic,assign) int credit;
 
+@property(nonatomic,assign) int followercnt;
+@property(nonatomic,assign) int followcnt;
 
 +(MIUser*) getInstance;
 
-+(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile;
++(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile withFollowercnt:(int)followercnt withFollowcnt:(int)followcnt withUniversity:(NSString*)university withDepartment:(NSString*)department;
 
 @end
