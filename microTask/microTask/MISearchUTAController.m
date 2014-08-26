@@ -14,7 +14,7 @@
 #import "MIHttpTool.h"
 #import "MITaskActivityTableViewController.h"
 #import "MIUserCollectionViewController.h"
-
+#import "UIView+cat.h"
 @implementation MISearchUTAController
 {
     NSMutableArray *_cellInfos;
@@ -60,6 +60,7 @@
     [self addChildViewController:_taController];
     [_contentView addSubview:_taController.view];
     _taController.view.hidden=YES;
+    _taController.view.x=0;
     _taController.delegate=self;
     
      //添加用户的展示页面，初始隐藏
@@ -67,6 +68,7 @@
     [self addChildViewController:_userController];
     [_contentView addSubview:_userController.view];
     _userController.view.hidden=YES;
+    _userController.view.x=0;
     _curView=_taController.view;
     _userController.delegate=self;
   
@@ -183,6 +185,7 @@ static int lastSelect=0;
     [self request];
 
 }
+//点击搜索
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];

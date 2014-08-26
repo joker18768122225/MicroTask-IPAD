@@ -59,7 +59,7 @@
     
     //旋转图片列表
     self.imageTableView.transform = CGAffineTransformMakeRotation(-M_PI / 2);
-    self.imageTableView.frame=CGRectMake(84, 420, 400, 200);
+    self.imageTableView.frame=CGRectMake(84, 420, 370, 200);
     
     //滑块图片
     UIImage *img= [UIImage imageNamed:@"point.png"];
@@ -200,7 +200,7 @@
 {
      [_timeImageView1 setHidden:NO];
     float rate=sender.value/100;
-    float offset=rate*340;
+    float offset=rate*315;
     
     _timeImageView1.frame=CGRectMake(100+offset, _timeImageView1.frame.origin.y, _timeImageView1.frame.size.width, _timeImageView1.frame.size.height);
     
@@ -216,7 +216,7 @@
 {
     [_timeImageView2 setHidden:NO];
     float rate=sender.value/100;
-    float offset=rate*340;
+    float offset=rate*315;
     
     _timeImageView2.frame=CGRectMake(100+offset, _timeImageView2.frame.origin.y, _timeImageView2.frame.size.width, _timeImageView2.frame.size.height);
     

@@ -453,14 +453,14 @@
 			name = imageGridView;
 			sourceTree = "<group>";
 		};
-		DD111B50199E50A500D0ED2C /* 发布任务 */ = {
+		DD111B50199E50A500D0ED2C /* 发布任务&huodong */ = {
 			isa = PBXGroup;
 			children = (
 				DD63BAD21994E88F007FEB06 /* publishTaskActivityView.xib */,
 				DD4295001997422F001756EE /* MIPublishTaskActivityController.h */,
 				DD4295011997422F001756EE /* MIPublishTaskActivityController.m */,
 			);
-			name = "发布任务";
+			name = "发布任务&huodong";
 			sourceTree = "<group>";
 		};
 		DD111B54199E53F400D0ED2C /* 附近任务活动查询 */ = {
@@ -550,11 +550,11 @@
 				DD0A134319A71E1B00D38D04 /* 任务活动详情 */,
 				DDB9DD0F19AB364400EB9D63 /* 用户昵称搜索列表 */,
 				DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */,
-				DD590A4F19A9C51C00B2D09A /* 用户昵称 任务活动主题搜索 */,
+				DD590A4F19A9C51C00B2D09A /* 用户昵称&任务活动主题搜索 */,
 				DDF0FDC7199880FA00712B27 /* 注册&登录 */,
 				DD63BABE1994CD67007FEB06 /* 主界面 */,
 				DD111B54199E53F400D0ED2C /* 附近任务活动查询 */,
-				DD111B50199E50A500D0ED2C /* 发布任务 */,
+				DD111B50199E50A500D0ED2C /* 发布任务&huodong */,
 				DD5839491991E8EC00ED9BBA /* 实体类 */,
 				DD578E1C198FB3E800C47D56 /* image */,
 				DD494F1C198F8F09009641C3 /* Images.xcassets */,
@@ -708,14 +708,14 @@
 			name = "实体类";
 			sourceTree = "<group>";
 		};
-		DD590A4F19A9C51C00B2D09A /* 用户昵称 任务活动主题搜索 */ = {
+		DD590A4F19A9C51C00B2D09A /* 用户昵称&任务活动主题搜索 */ = {
 			isa = PBXGroup;
 			children = (
 				DD590A5019A9C58C00B2D09A /* MISearchUTAController.h */,
 				DD590A5119A9C58C00B2D09A /* MISearchUTAController.m */,
 				DD590A5319A9C5B100B2D09A /* searchUTAView.xib */,
 			);
-			name = "用户昵称 任务活动主题搜索";
+			name = "用户昵称&任务活动主题搜索";
 			sourceTree = "<group>";
 		};
 		DD63BABE1994CD67007FEB06 /* 主界面 */ = {

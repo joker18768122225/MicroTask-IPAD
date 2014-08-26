@@ -329,7 +329,7 @@
     MIFindCellInfo *info=[_cellInfos objectAtIndex:indexPath.row];
     
     //将文字限制在这个size之内
-    CGSize constraintSize = CGSizeMake(450,CGFLOAT_MAX);
+    CGSize constraintSize = CGSizeMake(425,CGFLOAT_MAX);
     NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17]};
     
     //计算contentsize

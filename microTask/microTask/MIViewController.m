@@ -45,7 +45,7 @@ static MIViewController *mainControllerInstance=nil;
     _leftNController=[[UINavigationController alloc] initWithRootViewController:findController];
     //不知道为什么width要设置成244
     _leftNController.view.x=74;
-    _leftNController.view.width=244;
+    _leftNController.view.width=220;
     
     [self addChildViewController:_leftNController];
     [self.view addSubview:_leftNController.view];
@@ -67,8 +67,8 @@ static MIViewController *mainControllerInstance=nil;
     _rightNController=[[UINavigationController alloc] initWithRootViewController:controller];
     
     //不知道为什么width要设置成244
-    _rightNController.view.x=574;
-    _rightNController.view.width=194;
+    _rightNController.view.x=549;
+    _rightNController.view.width=219;
     
     [self addChildViewController:_rightNController];
     [self.view addSubview:_rightNController.view];
