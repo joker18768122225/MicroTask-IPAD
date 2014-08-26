@@ -34,6 +34,7 @@ static MIUser* instance=nil;
     instance->_followercnt=followercnt;
     instance->_department=department;
     instance->_university=university;
+    instance->_profile=profile;
 }
 
 -(NSString *)description

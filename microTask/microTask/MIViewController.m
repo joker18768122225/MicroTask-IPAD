@@ -15,6 +15,7 @@
 #import "UIView+cat.h"
 #import <SDWebImage/UIButton+WebCache.h>
 #import "MISearchUTAController.h"
+#import "MIUserInfoController.h"
 
 static MIViewController *mainControllerInstance=nil;
 @implementation MIViewController
@@ -97,6 +98,7 @@ static MIViewController *mainControllerInstance=nil;
     
   
     [_leftNController popToRootViewControllerAnimated:NO];
+    [_rightNController popToRootViewControllerAnimated:NO];
    
   
     
@@ -145,22 +147,22 @@ static MIViewController *mainControllerInstance=nil;
 {
     [self publishTaskActivity:@"activity"];
     
-
 }
-
 
 ///发布活动或任务
 -(void)publishTaskActivity:(NSString*)can_need_activity
 {
     MIPublishTaskActivityController *taController=[[MIPublishTaskActivityController alloc]initWithNibName:@"publishTaskActivityView" bundle:nil Can_need_activity:can_need_activity];
-
-        [_leftNController popViewControllerAnimated:NO];//一定要NO，不然出错(动画切太快导致错误)
-        [_leftNController pushViewController:taController animated:NO];
-
-
+    
+    [_leftNController popViewControllerAnimated:NO];//一定要NO，不然出错(动画切太快导致错误)
+    [_leftNController pushViewController:taController animated:NO];
+    
+    //左边切换后，与左边关联的右边的controller需要释放
+    [_rightNController popToRootViewControllerAnimated:NO];
     
     
 }
+
 - (IBAction)tapBack:(UIControl *)sender
 {
     //如果是发布任务的controller 则取消键盘
@@ -176,11 +178,25 @@ static MIViewController *mainControllerInstance=nil;
     
 }
 
+///点击搜索用户，任务活动
 - (IBAction)searchUTA:(UIButton *)sender
 {
     
     MISearchUTAController *sc=[[MISearchUTAController alloc] initWithNibName:@"searchUTAView" bundle:nil];
     [_leftNController pushViewController:sc animated:NO];
+    
+    [_rightNController popToRootViewControllerAnimated:NO];
 }
+
+///点击头像
+- (IBAction)myInfo:(id)sender
+{
+    MIUserInfoController *myInfo=[[MIUserInfoController alloc] initWithNibName:@"UserInfoController" bundle:nil userInfo:[MIUser getInstance]];
+    [_leftNController popViewControllerAnimated:NO];
+    [_leftNController pushViewController:myInfo animated:NO];
+    
+    [_rightNController popToRootViewControllerAnimated:NO];
+}
+
 
 @end

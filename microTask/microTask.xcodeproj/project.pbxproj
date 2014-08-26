@@ -60,6 +60,11 @@
 		DD675E4719A258100068F9DF /* addTaskActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4419A258100068F9DF /* addTaskActivity.png */; };
 		DD675E4A19A25A210068F9DF /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4919A25A210068F9DF /* cancel.png */; };
 		DD675E4E19A25E4A0068F9DF /* middleBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DD675E4D19A25E4A0068F9DF /* middleBG.png */; };
+		DD7DDDDF19AC5EB700114B6E /* MIUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7DDDDE19AC5EB700114B6E /* MIUserInfoController.m */; };
+		DD7DDDE119AC5F8C00114B6E /* UserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7DDDE019AC5F8C00114B6E /* UserInfoController.xib */; };
+		DD7DDDE619AC7B2D00114B6E /* MIUserEditInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7DDDE419AC7B2D00114B6E /* MIUserEditInfoController.m */; };
+		DD7DDDE719AC7B2D00114B6E /* MIUserEditInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */; };
+		DD7DDDE919AC837200114B6E /* highlightedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7DDDE819AC837200114B6E /* highlightedBG.png */; };
 		DD8AEC051990BB4900E5795B /* QQConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AEBEA1990BB4900E5795B /* QQConnection.framework */; };
 		DD8AEC061990BB4900E5795B /* QZoneConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AEBEB1990BB4900E5795B /* QZoneConnection.framework */; };
 		DD8AEC081990BB4900E5795B /* WeChatConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AEBED1990BB4900E5795B /* WeChatConnection.framework */; };
@@ -108,6 +113,11 @@
 		DDA2497319A32FC10049FC0E /* all.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497219A32FC10049FC0E /* all.png */; };
 		DDA2497519A332060049FC0E /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2497419A332060049FC0E /* group.png */; };
 		DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */; };
+		DDB7848219ACB32700A0F1F6 /* MIUserEditProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7848019ACB32700A0F1F6 /* MIUserEditProfileController.m */; };
+		DDB7848319ACB32700A0F1F6 /* MIUserEditProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB7848119ACB32700A0F1F6 /* MIUserEditProfileController.xib */; };
+		DDB7848519ACB4D800A0F1F6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7848419ACB4D800A0F1F6 /* back.png */; };
+		DDB7848819ACC41800A0F1F6 /* editGenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB7848719ACC41800A0F1F6 /* editGenderView.xib */; };
+		DDB7848E19ACC84B00A0F1F6 /* MIUserEditGenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */; };
 		DDB9DD0C19AB19A100EB9D63 /* MITaskActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */; };
 		DDB9DD0D19AB19A100EB9D63 /* MITaskActivityTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */; };
 		DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */; };
@@ -267,6 +277,13 @@
 		DD675E4419A258100068F9DF /* addTaskActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addTaskActivity.png; sourceTree = "<group>"; };
 		DD675E4919A25A210068F9DF /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		DD675E4D19A25E4A0068F9DF /* middleBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleBG.png; sourceTree = "<group>"; };
+		DD7DDDDD19AC5EB700114B6E /* MIUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserInfoController.h; sourceTree = "<group>"; };
+		DD7DDDDE19AC5EB700114B6E /* MIUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserInfoController.m; sourceTree = "<group>"; };
+		DD7DDDE019AC5F8C00114B6E /* UserInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoController.xib; sourceTree = "<group>"; };
+		DD7DDDE319AC7B2D00114B6E /* MIUserEditInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditInfoController.h; sourceTree = "<group>"; };
+		DD7DDDE419AC7B2D00114B6E /* MIUserEditInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditInfoController.m; sourceTree = "<group>"; };
+		DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUserEditInfoController.xib; sourceTree = "<group>"; };
+		DD7DDDE819AC837200114B6E /* highlightedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highlightedBG.png; sourceTree = "<group>"; };
 		DD8AEBEA1990BB4900E5795B /* QQConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQConnection.framework; sourceTree = "<group>"; };
 		DD8AEBEB1990BB4900E5795B /* QZoneConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QZoneConnection.framework; sourceTree = "<group>"; };
 		DD8AEBEC1990BB4900E5795B /* SinaWeiboConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SinaWeiboConnection.framework; sourceTree = "<group>"; };
@@ -330,6 +347,13 @@
 		DDB63DEB1995ECC5008D4388 /* MIFindCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCellInfo.m; sourceTree = "<group>"; };
 		DDB63DED1995F20F008D4388 /* MIFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFindCell.h; sourceTree = "<group>"; };
 		DDB63DEE1995F20F008D4388 /* MIFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFindCell.m; sourceTree = "<group>"; };
+		DDB7847F19ACB32700A0F1F6 /* MIUserEditProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditProfileController.h; sourceTree = "<group>"; };
+		DDB7848019ACB32700A0F1F6 /* MIUserEditProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditProfileController.m; sourceTree = "<group>"; };
+		DDB7848119ACB32700A0F1F6 /* MIUserEditProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUserEditProfileController.xib; sourceTree = "<group>"; };
+		DDB7848419ACB4D800A0F1F6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		DDB7848719ACC41800A0F1F6 /* editGenderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = editGenderView.xib; sourceTree = "<group>"; };
+		DDB7848C19ACC84B00A0F1F6 /* MIUserEditGenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditGenderView.h; sourceTree = "<group>"; };
+		DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditGenderView.m; sourceTree = "<group>"; };
 		DDB9DD0919AB19A100EB9D63 /* MITaskActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITaskActivityTableViewController.h; sourceTree = "<group>"; };
 		DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITaskActivityTableViewController.m; sourceTree = "<group>"; };
 		DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MITaskActivityTableViewController.xib; sourceTree = "<group>"; };
@@ -516,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				DDBC70B619A0484C0078371E /* uitility */,
+				DD7DDDDC19AC5E7E00114B6E /* 用户首页 */,
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
@@ -523,7 +548,7 @@
 				DD494F16198F8F08009641C3 /* Main.storyboard */,
 				DDB9DD1519AB37AD00EB9D63 /* protocol */,
 				DD0A134319A71E1B00D38D04 /* 任务活动详情 */,
-				DDB9DD0F19AB364400EB9D63 /* 用户昵昵称搜索列表 */,
+				DDB9DD0F19AB364400EB9D63 /* 用户昵称搜索列表 */,
 				DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */,
 				DD590A4F19A9C51C00B2D09A /* 用户昵称 任务活动主题搜索 */,
 				DDF0FDC7199880FA00712B27 /* 注册&登录 */,
@@ -711,6 +736,35 @@
 			name = KxMenu;
 			sourceTree = "<group>";
 		};
+		DD7DDDDC19AC5E7E00114B6E /* 用户首页 */ = {
+			isa = PBXGroup;
+			children = (
+				DD7DDDEA19AC970300114B6E /* 首页信息 */,
+				DD7DDDE219AC7A1D00114B6E /* 修改详细资料 */,
+			);
+			name = "用户首页";
+			sourceTree = "<group>";
+		};
+		DD7DDDE219AC7A1D00114B6E /* 修改详细资料 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7848619ACBA2700A0F1F6 /* 修改资料首页 */,
+				DDB7847E19ACA9E200A0F1F6 /* 修改个性签名 */,
+				DDB7847D19ACA9D800A0F1F6 /* 修改头像 */,
+			);
+			name = "修改详细资料";
+			sourceTree = "<group>";
+		};
+		DD7DDDEA19AC970300114B6E /* 首页信息 */ = {
+			isa = PBXGroup;
+			children = (
+				DD7DDDDD19AC5EB700114B6E /* MIUserInfoController.h */,
+				DD7DDDDE19AC5EB700114B6E /* MIUserInfoController.m */,
+				DD7DDDE019AC5F8C00114B6E /* UserInfoController.xib */,
+			);
+			name = "首页信息";
+			sourceTree = "<group>";
+		};
 		DD8AEBE81990BB4900E5795B /* ShareSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,6 +901,8 @@
 		DD8DFE3619A0FA6300FD7C0F /* button */ = {
 			isa = PBXGroup;
 			children = (
+				DDB7848419ACB4D800A0F1F6 /* back.png */,
+				DD7DDDE819AC837200114B6E /* highlightedBG.png */,
 				DD590A4D19A9C31A00B2D09A /* homepage.png */,
 				DD4FC48C19A8B95000C4706C /* apply.png */,
 				DDA2497419A332060049FC0E /* group.png */,
@@ -875,6 +931,36 @@
 			path = button;
 			sourceTree = "<group>";
 		};
+		DDB7847D19ACA9D800A0F1F6 /* 修改头像 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "修改头像";
+			sourceTree = "<group>";
+		};
+		DDB7847E19ACA9E200A0F1F6 /* 修改个性签名 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7847F19ACB32700A0F1F6 /* MIUserEditProfileController.h */,
+				DDB7848019ACB32700A0F1F6 /* MIUserEditProfileController.m */,
+				DDB7848119ACB32700A0F1F6 /* MIUserEditProfileController.xib */,
+			);
+			name = "修改个性签名";
+			sourceTree = "<group>";
+		};
+		DDB7848619ACBA2700A0F1F6 /* 修改资料首页 */ = {
+			isa = PBXGroup;
+			children = (
+				DD7DDDE319AC7B2D00114B6E /* MIUserEditInfoController.h */,
+				DD7DDDE419AC7B2D00114B6E /* MIUserEditInfoController.m */,
+				DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */,
+				DDB7848719ACC41800A0F1F6 /* editGenderView.xib */,
+				DDB7848C19ACC84B00A0F1F6 /* MIUserEditGenderView.h */,
+				DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */,
+			);
+			name = "修改资料首页";
+			sourceTree = "<group>";
+		};
 		DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,7 +976,7 @@
 			name = "任务活动搜索列表";
 			sourceTree = "<group>";
 		};
-		DDB9DD0F19AB364400EB9D63 /* 用户昵昵称搜索列表 */ = {
+		DDB9DD0F19AB364400EB9D63 /* 用户昵称搜索列表 */ = {
 			isa = PBXGroup;
 			children = (
 				DD590A5719A9D88000B2D09A /* MIUserCell.h */,
@@ -900,7 +986,7 @@
 				DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */,
 				DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */,
 			);
-			name = "用户昵昵称搜索列表";
+			name = "用户昵称搜索列表";
 			sourceTree = "<group>";
 		};
 		DDB9DD1519AB37AD00EB9D63 /* protocol */ = {
@@ -1069,12 +1155,14 @@
 				DD8DFE5919A0FA6300FD7C0F /* point.png in Resources */,
 				DD494F7D198F9217009641C3 /* readme.txt in Resources */,
 				DD8DFE5519A0FA6300FD7C0F /* forward.png in Resources */,
+				DDB7848319ACB32700A0F1F6 /* MIUserEditProfileController.xib in Resources */,
 				DD8DFE4919A0FA6300FD7C0F /* leftBarBG.png in Resources */,
 				DD63BAD31994E88F007FEB06 /* publishTaskActivityView.xib in Resources */,
 				DD8DFE5119A0FA6300FD7C0F /* chooseGroup.png in Resources */,
 				DD675E4619A258100068F9DF /* addFriend.png in Resources */,
 				DDA2496F19A3292E0049FC0E /* entertainment.png in Resources */,
 				DD590A5419A9C5B100B2D09A /* searchUTAView.xib in Resources */,
+				DDB7848819ACC41800A0F1F6 /* editGenderView.xib in Resources */,
 				DD8DFE5319A0FA6300FD7C0F /* confirm.png in Resources */,
 				DD494F1D198F8F09009641C3 /* Images.xcassets in Resources */,
 				DDA2497019A3292E0049FC0E /* life.png in Resources */,
@@ -1090,6 +1178,8 @@
 				DD8DFE5C19A0FA6300FD7C0F /* weiboLogin.png in Resources */,
 				DD8DFE5A19A0FA6300FD7C0F /* qqLogin.png in Resources */,
 				DD494F7C198F9217009641C3 /* mapapi.bundle in Resources */,
+				DD7DDDE919AC837200114B6E /* highlightedBG.png in Resources */,
+				DD7DDDE719AC7B2D00114B6E /* MIUserEditInfoController.xib in Resources */,
 				DD494F0F198F8F08009641C3 /* InfoPlist.strings in Resources */,
 				DD590A4E19A9C31A00B2D09A /* homepage.png in Resources */,
 				DDB9DD0D19AB19A100EB9D63 /* MITaskActivityTableViewController.xib in Resources */,
@@ -1106,7 +1196,9 @@
 				DD5DF71C199674C200D2CD30 /* FindCell.xib in Resources */,
 				DD8DFE4A19A0FA6300FD7C0F /* loginBG.jpg in Resources */,
 				DD8DFE5419A0FA6300FD7C0F /* find.png in Resources */,
+				DD7DDDE119AC5F8C00114B6E /* UserInfoController.xib in Resources */,
 				DD8DFE5B19A0FA6300FD7C0F /* subImage.png in Resources */,
+				DDB7848519ACB4D800A0F1F6 /* back.png in Resources */,
 				DDA2497119A3292E0049FC0E /* study.png in Resources */,
 				DD8AEC101990BB4900E5795B /* WeiboSDK.bundle in Resources */,
 				DD578E22198FCBA400C47D56 /* loginField.png in Resources */,
@@ -1164,7 +1256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7DDDE619AC7B2D00114B6E /* MIUserEditInfoController.m in Sources */,
 				DD63BAD91994F7F9007FEB06 /* KxMenu.m in Sources */,
+				DDB7848219ACB32700A0F1F6 /* MIUserEditProfileController.m in Sources */,
 				DD111B4F199E35BD00D0ED2C /* MIProperties.m in Sources */,
 				DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */,
 				DD494F15198F8F08009641C3 /* MIAppDelegate.m in Sources */,
@@ -1185,8 +1279,10 @@
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
 				DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */,
 				DD494F11198F8F08009641C3 /* main.m in Sources */,
+				DDB7848E19ACC84B00A0F1F6 /* MIUserEditGenderView.m in Sources */,
 				DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */,
 				DD0A134719A71E4800D38D04 /* MITAdetailController.m in Sources */,
+				DD7DDDDF19AC5EB700114B6E /* MIUserInfoController.m in Sources */,
 				DD4295021997422F001756EE /* MIPublishTaskActivityController.m in Sources */,
 				DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */,
 				DD0C8533199791E800B4EA3B /* MYButton.m in Sources */,

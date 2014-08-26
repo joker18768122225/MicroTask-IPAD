@@ -60,6 +60,8 @@
         self.view.alpha = 1.0f;
     }];
 
+    //每次切换回来都要加载最新任务活动(根据上一次选择的类型)
+    [self reloadCurrent];
 }
 
 - (void)viewDidLoad
@@ -68,7 +70,7 @@
     
     //参数初始化
     page=1;
-    count=5;
+    count=15;
     isReload=YES;
     isLoading=NO;
     can_need_activity=@"all";
@@ -84,8 +86,8 @@
     //添加任务活动展示的controller
     [self addChildViewController:_taTableController];
     [_contentView addSubview:_taTableController.view];
-    
-    //初始时加载
+
+    //首次则设置查询所有
     [self reloadAll];
     
 }
@@ -166,6 +168,16 @@
     [self request];
     
     
+}
+-(void)reloadCurrent
+{
+    /*
+    //切换到附近人物则滑动到顶部
+    _taTableController.tableView.contentOffset=CGPointMake(0, 0);
+    page=1;
+    isReload=YES;
+    [self request];
+    */
 }
 
 ///查询所有任务和活动

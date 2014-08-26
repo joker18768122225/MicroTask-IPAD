@@ -177,8 +177,12 @@
     [params setValue:@"13665656565" forKey:@"mobile"];
     
     [MIHttpTool httpRequestWithMethod:@"post" withUrl:TASK_ACTIVITY_APPLY withParams:params withSuccessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [_applyButton setTitle:@"取消申请" forState:UIControlStateNormal];
-        [_applyButton setHighlighted:YES];
+        if ([[responseObject objectForKey:@"status"] isEqualToString:@"success"])
+        {
+            [_applyButton setTitle:@"取消申请" forState:UIControlStateNormal];
+            [_applyButton setHighlighted:YES];
+            _info.my_relation=@"apply";
+        }
         NSLog(@"%@",responseObject);
         
     } withErrorBlock:^(AFHTTPRequestOperation *operation, NSError *error) {

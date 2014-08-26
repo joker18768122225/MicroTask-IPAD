@@ -37,6 +37,9 @@
                                 <state key="normal" image="avatar.tiff">
                                     <color key="titleShadowColor" red="0.12893768483509782" green="0.5" blue="0.34299174524060583" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="myInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="82o-aU-xdG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EFV-cq-XZ9">
                                 <rect key="frame" x="17" y="123" width="40" height="40"/>
