@@ -36,41 +36,6 @@
 
     
 }
-
-///动态计算每个cell的高度(通用方法)
--(void)calculateCellsHeight
-{
-    for(MIFindCellInfo *cell in _cellInfos)
-    {
-        //将文字限制在这个size之内
-        CGSize constraintSize = CGSizeMake(450,CGFLOAT_MAX);
-        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17]};
-        
-        //计算contentsize
-        CGSize size = [cell.content boundingRectWithSize:constraintSize options: NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
-        
-        size.height+=10;
-        cell.contentSize=size;
-        
-        //计算图片高度和纵向间隙
-        int photoCnt=cell.photos.count;
-        int photoRow=photoCnt/3;
-        if (photoCnt%3!=0)
-            photoRow++;
-        if (photoCnt==0)
-        {
-            photoRow=0;
-        }
-        cell.photoRow=photoRow;
-        cell.photoCnt=photoCnt;
-        float photoHeight=photoRow*10+10+photoRow*143;
-        
-        
-        //计算cell内容的高度
-        cell.height=10+64+10+size.height+10+32+20+photoHeight;
-        
-    }
-}
 /**时间处理，string转date并计算发布时间与当前时间差，显示不同信息
  2分钟内显示：刚刚  一小时之内显示X分钟之前：
  一天内显示X小时之前 三天内显示：昨天，前天
@@ -198,8 +163,6 @@
         
         [_cellInfos addObject:cellInfo];
     }
-    
-    [self calculateCellsHeight];
     
     //最后重新载入table数据
     [_tableView reloadData];
@@ -361,7 +324,35 @@
     //如果是最后一个cell
     if (indexPath.row==_cellInfos.count )
         return 40;
+    
+    //动态计算高度
     MIFindCellInfo *info=[_cellInfos objectAtIndex:indexPath.row];
+    
+    //将文字限制在这个size之内
+    CGSize constraintSize = CGSizeMake(450,CGFLOAT_MAX);
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17]};
+    
+    //计算contentsize
+    CGSize size = [info.content boundingRectWithSize:constraintSize options: NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    
+    size.height+=10;
+    info.contentSize=size;
+    
+    //计算图片高度和纵向间隙
+    int photoCnt=info.photos.count;
+    int photoRow=photoCnt/3;
+    if (photoCnt%3!=0)
+        photoRow++;
+    if (photoCnt==0)
+    {
+        photoRow=0;
+    }
+    info.photoRow=photoRow;
+    info.photoCnt=photoCnt;
+    float photoHeight=photoRow*10+10+photoRow*143;
+    //计算cell内容的高度
+    
+    info.height=10+64+10+size.height+10+32+20+photoHeight;
     return info.height;//这样设置高度好像效率比较高比cell.frame.size.height(这样好像会多调用一次设置cell)好
     
 }

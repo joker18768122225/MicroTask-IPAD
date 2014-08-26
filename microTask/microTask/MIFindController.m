@@ -147,6 +147,10 @@
 
 -(void)reloadWithCan_Need_Activity:(NSString*)cna withType:(NSString*)t
 {
+    if (isLoading)
+    {
+        return;
+    }
     //重置参数
     if (cna)
     {
@@ -167,17 +171,29 @@
 ///查询所有任务和活动
 -(void)reloadAll
 {
+    if (isLoading)
+    {
+        return;
+    }
     self.can_need_activityLabel.text=@"所有";
     [self reloadWithCan_Need_Activity:@"all" withType:nil];
     
 }
 -(void)reloadCan
 {
+    if (isLoading)
+    {
+        return;
+    }
     self.can_need_activityLabel.text=@"我可以帮忙";
     [self reloadWithCan_Need_Activity:@"can" withType:nil];
 }
 -(void)reloadNeed
 {
+    if (isLoading)
+    {
+        return;
+    }
     self.can_need_activityLabel.text=@"我需要帮忙";
     [self reloadWithCan_Need_Activity:@"need" withType:nil];
     
@@ -192,6 +208,10 @@
 ///下滑到底部触发请求
 -(void)loadMore
 {
+    if (isLoading)
+    {
+        return;
+    }
     isReload=NO;
     //数据加载完了则直接返回不能在loadmore
     if (_taTableController.isLoadEnd)
@@ -252,6 +272,11 @@
 
 - (IBAction)reloadAllType:(UIButton *)sender
 {
+    if (isLoading)
+    {
+        return;
+    }
+    
     //更新当前小分类button
     chooseTypeButton.enabled=YES;
     chooseTypeButton=sender;
@@ -261,6 +286,10 @@
 
 - (IBAction)reloadStudy:(UIButton *)sender
 {
+    if (isLoading)
+    {
+        return;
+    }
     chooseTypeButton.enabled=YES;
     chooseTypeButton=sender;
     chooseTypeButton.enabled=NO;
@@ -268,6 +297,10 @@
 }
 - (IBAction)reloadEntertainment:(UIButton *)sender
 {
+    if (isLoading)
+    {
+        return;
+    }
     chooseTypeButton.enabled=YES;
     chooseTypeButton=sender;
     chooseTypeButton.enabled=NO;
@@ -276,7 +309,12 @@
     
 }
 - (IBAction)reloadLife:(UIButton *)sender
-{ chooseTypeButton.enabled=YES;
+{
+    if (isLoading)
+    {
+        return;
+    }
+    chooseTypeButton.enabled=YES;
     chooseTypeButton=sender;
     chooseTypeButton.enabled=NO;
     [self reloadWithCan_Need_Activity:nil withType:@"life"];
