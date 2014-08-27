@@ -26,6 +26,10 @@ static NSString *TASK_ACTIVITY_APPLY=@"http://10.82.81.156:8080/microTask/task_a
 //用户
 static NSString *USER_SEARCH_BY_NICKNAME=@"http://10.82.81.156:8080/microTask/user/search.action";
 
+//院校
+static NSString *PROVINCE_ALL=@"http://10.82.81.156:8080/microTask/department/provinceAll.action";
+static NSString *UNIVERSITY_SEARCH_BYPID=@"http://10.82.81.156:8080/microTask/department/findUniversity.action";
+
 
 @interface MIHttpTool : NSObject
 

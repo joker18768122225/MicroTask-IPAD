@@ -135,7 +135,7 @@
     _expireDateLabel.y=_eDateLabel.y;
     
     //图片gridview
-    MIImageGridView *imageGridView=[[MIImageGridView alloc] initWithWidth:410 withPhotos:_info.photos withPhotoWidth:130 withColumn:3];
+    MIImageGridView *imageGridView=[[MIImageGridView alloc] initWithWidth:435 withPhotos:_info.photos withPhotoWidth:140 withColumn:3];
     
     imageGridView.x=20;
     imageGridView.y=_eDateLabel.y+_eDateLabel.height+20;
@@ -161,7 +161,7 @@
 {
     //滑出
     [UIView animateWithDuration:0.25 animations:^{
-        self.view.x=450;
+        self.view.x=self.view.width;
         //动画结束回调
     } completion:^(BOOL finished) {
         [[MIViewController getInstance].rightNController popViewControllerAnimated:NO];

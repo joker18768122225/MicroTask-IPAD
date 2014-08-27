@@ -264,9 +264,9 @@
     //设置图片(返回自定义的imageGridView)
     if (photoCnt>0)
     {
-        MIImageGridView *imageGridView=[[MIImageGridView alloc] initWithWidth:450 withPhotos:photos withPhotoWidth:143 withColumn:3];
+        MIImageGridView *imageGridView=[[MIImageGridView alloc] initWithWidth:435 withPhotos:photos withPhotoWidth:135 withColumn:3];
         
-        imageGridView.frame=CGRectMake(10, bottomBarY, 450, imageGridView.frame.size.height);
+        imageGridView.frame=CGRectMake(10, bottomBarY, imageGridView.width, imageGridView.frame.size.height);
         [cell.cellContentView addSubview:imageGridView];
         
         //更新底部bottomBarView的Y坐标

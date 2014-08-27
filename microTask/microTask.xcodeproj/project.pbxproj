@@ -123,6 +123,8 @@
 		DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */; };
 		DDB9DD1419AB36A200EB9D63 /* MIUserCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */; };
 		DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBC70B819A0486D0078371E /* MIHttpTool.m */; };
+		DDC032DC19AD883400ED7572 /* MIUserEditUniversityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */; };
+		DDC032DE19AD884E00ED7572 /* UserEditUniversity.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */; };
 		DDCC197D19A78B3C00FB4D65 /* UIView+cat.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */; };
 		DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEE1995F20F008D4388 /* MIFindCell.m */; };
 		DDEDD1CA199F87B9003DBE51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEDD1C9199F87B9003DBE51 /* MapKit.framework */; };
@@ -363,6 +365,9 @@
 		DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUserCollectionViewController.xib; sourceTree = "<group>"; };
 		DDBC70B719A0486D0078371E /* MIHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHttpTool.h; sourceTree = "<group>"; };
 		DDBC70B819A0486D0078371E /* MIHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHttpTool.m; sourceTree = "<group>"; };
+		DDC032DA19AD883400ED7572 /* MIUserEditUniversityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditUniversityView.h; sourceTree = "<group>"; };
+		DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditUniversityView.m; sourceTree = "<group>"; };
+		DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEditUniversity.xib; sourceTree = "<group>"; };
 		DDCC197B19A78B3C00FB4D65 /* UIView+cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+cat.h"; sourceTree = "<group>"; };
 		DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+cat.m"; sourceTree = "<group>"; };
 		DDEDD1C9199F87B9003DBE51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -539,13 +544,13 @@
 		DD494F0A198F8F08009641C3 /* microTask */ = {
 			isa = PBXGroup;
 			children = (
-				DDBC70B619A0484C0078371E /* uitility */,
-				DD7DDDDC19AC5E7E00114B6E /* 用户首页 */,
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
 				DD111B4E199E35BD00D0ED2C /* MIProperties.m */,
 				DD494F16198F8F08009641C3 /* Main.storyboard */,
+				DDBC70B619A0484C0078371E /* uitility */,
+				DD7DDDDC19AC5E7E00114B6E /* 用户首页 */,
 				DDB9DD1519AB37AD00EB9D63 /* protocol */,
 				DD0A134319A71E1B00D38D04 /* 任务活动详情 */,
 				DDB9DD0F19AB364400EB9D63 /* 用户昵称搜索列表 */,
@@ -951,12 +956,11 @@
 		DDB7848619ACBA2700A0F1F6 /* 修改资料首页 */ = {
 			isa = PBXGroup;
 			children = (
+				DDC032D919AD87F300ED7572 /* 院校&院系选择 */,
+				DDC032D819AD87E100ED7572 /* 性别选择 */,
 				DD7DDDE319AC7B2D00114B6E /* MIUserEditInfoController.h */,
 				DD7DDDE419AC7B2D00114B6E /* MIUserEditInfoController.m */,
 				DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */,
-				DDB7848719ACC41800A0F1F6 /* editGenderView.xib */,
-				DDB7848C19ACC84B00A0F1F6 /* MIUserEditGenderView.h */,
-				DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */,
 			);
 			name = "修改资料首页";
 			sourceTree = "<group>";
@@ -1005,6 +1009,26 @@
 				DDF82C6019A1BAE900F1FE83 /* HttpUtil */,
 			);
 			name = uitility;
+			sourceTree = "<group>";
+		};
+		DDC032D819AD87E100ED7572 /* 性别选择 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7848719ACC41800A0F1F6 /* editGenderView.xib */,
+				DDB7848C19ACC84B00A0F1F6 /* MIUserEditGenderView.h */,
+				DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */,
+			);
+			name = "性别选择";
+			sourceTree = "<group>";
+		};
+		DDC032D919AD87F300ED7572 /* 院校&院系选择 */ = {
+			isa = PBXGroup;
+			children = (
+				DDC032DA19AD883400ED7572 /* MIUserEditUniversityView.h */,
+				DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */,
+				DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */,
+			);
+			name = "院校&院系选择";
 			sourceTree = "<group>";
 		};
 		DDD125E519AB698F004EDD70 /* myButton */ = {
@@ -1176,6 +1200,7 @@
 				DD8DFE5D19A0FA6300FD7C0F /* time.png in Resources */,
 				DD8DFE5619A0FA6300FD7C0F /* like.png in Resources */,
 				DD8DFE5C19A0FA6300FD7C0F /* weiboLogin.png in Resources */,
+				DDC032DE19AD884E00ED7572 /* UserEditUniversity.xib in Resources */,
 				DD8DFE5A19A0FA6300FD7C0F /* qqLogin.png in Resources */,
 				DD494F7C198F9217009641C3 /* mapapi.bundle in Resources */,
 				DD7DDDE919AC837200114B6E /* highlightedBG.png in Resources */,
@@ -1269,6 +1294,7 @@
 				DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */,
 				DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */,
 				DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */,
+				DDC032DC19AD883400ED7572 /* MIUserEditUniversityView.m in Sources */,
 				DD58394C1991E90700ED9BBA /* MIUser.m in Sources */,
 				DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */,
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,

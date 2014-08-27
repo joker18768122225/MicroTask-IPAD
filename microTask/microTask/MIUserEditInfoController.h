@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MIUser.h"
 @interface MIUserEditInfoController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIView *view;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil userInfo:(MIUser*)userInfo;
 @end
