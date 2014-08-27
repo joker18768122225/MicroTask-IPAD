@@ -14,7 +14,7 @@
 #import "MIHttpTool.h"
 #import "MITaskActivityTableViewController.h"
 #import "MIUserCollectionViewController.h"
-
+#import "UIView+cat.h"
 @implementation MIUserCollectionViewController
 
 {
@@ -37,6 +37,14 @@
     _cellInfos=[[NSMutableArray alloc] init];
     //类似tableView注册cell信息
     [_collectionView registerNib:[UINib nibWithNibName:@"userCellView" bundle:nil] forCellWithReuseIdentifier:@"userCell"];
+    _collectionView.alwaysBounceVertical=YES;
+    
+    
+    self.view.x=0;
+    //不知道为什么如果不这样设置，width height和xib中不一样，会自动改变
+    self.view.height=704;
+    self.view.width=475;
+
 }
 
 - (void)didReceiveMemoryWarning

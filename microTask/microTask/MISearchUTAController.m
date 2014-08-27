@@ -68,7 +68,6 @@
     [self addChildViewController:_userController];
     [_contentView addSubview:_userController.view];
     _userController.view.hidden=YES;
-    _userController.view.x=0;
     _curView=_taController.view;
     _userController.delegate=self;
   
