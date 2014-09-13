@@ -13,10 +13,7 @@
 #import "MIViewController.h"
 #import "MIUserEditGenderView.h"
 #import "MIHttpTool.h"
-#import "MIUserEditUniversityView.h"
-
-static NSMutableArray* pickerViewProvince;
-static NSMutableDictionary* pickerViewPtoU;
+#import "MIChooseProvinceController.h"
 
 @implementation MIUserEditInfoController
 {
@@ -48,7 +45,21 @@ static NSMutableDictionary* pickerViewPtoU;
     __weak IBOutlet UIButton *_universityButton;
     
 }
+-(void)activateUIController
+{
+    for (UIButton *button in _editButtons) {
+        button.userInteractionEnabled=YES;
+    }
+    _nickNameTextField.userInteractionEnabled=YES;
+}
+-(void)dismissUIController
+{
+    for (UIButton *button in _editButtons) {
+        button.userInteractionEnabled=NO;
+    }
+    _nickNameTextField.userInteractionEnabled=NO;
 
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     //滑入
@@ -138,94 +149,32 @@ static NSMutableDictionary* pickerViewPtoU;
     editGV.buttons=_editButtons;
     [self.view addSubview:editGV];
     
-    //使得当前buttons失效,关掉选择性别才行
-    for (UIButton *button in _editButtons) {
-        button.userInteractionEnabled=NO;
-    }
-    
     //滑入
      editGV.y=768;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         editGV.y=568;
     }];
+    
+    [self dismissUIController];
 }
 
-static int pCnt=0;
-///根据省id查找院校,并设置pickerViewPtoU
--(void)setUniversityByProvid:(int)provid provinceName:(NSString*)provName
-{
-    
-    [MIHttpTool httpRequestWithMethod:@"get" withUrl:UNIVERSITY_SEARCH_BYPID withParams:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:provid] forKey:@"provinceid"] withSuccessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",[responseObject objectForKey:@"msg"]);
-        //取得省对应所有大学
-        NSArray *unviersities=[responseObject objectForKey:@"universities"];
-        NSMutableArray *uArr=[[NSMutableArray alloc] init];
-        
-        for (NSDictionary* uDic in unviersities)
-        {
-            NSString *univName=[uDic objectForKey:@"univName"];
-            NSString *univid=[uDic objectForKey:@"univid"];
-            [uArr addObject:univName];
-        }
-        
-        //添加映射关系
-        [pickerViewPtoU setValue:uArr forKey:provName];
-        pCnt++;
-        if (pCnt==35)//加载院校完成则触发
-            [self showUniversityPickerView];
-        
-    } withErrorBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSLog(@"%@",error);
-    }];
-
-    
-}
-///院校选择pickerview
--(void)showUniversityPickerView
-{
-    MIUserEditUniversityView *euView= [[[NSBundle mainBundle] loadNibNamed:@"UserEditUniversity" owner:self options:nil] firstObject];
-    
-    [self.view addSubview:euView];
-    euView.y=500;
-    [euView setInfoWithDic:pickerViewPtoU provinces:pickerViewProvince];
-}
-
+//用UINavigationController展示院校选择
 - (IBAction)editUniversity:(UIButton *)sender
 {
-    //避免重复加载
-    if (pickerViewProvince&&pickerViewPtoU)
-    {
-        [self showUniversityPickerView];
-    }
-
-    pickerViewProvince=[[NSMutableArray alloc] init];
-    pickerViewPtoU=[[NSMutableDictionary alloc] init];
     
-    //先获得省，高校信息
-    [MIHttpTool httpRequestWithMethod:@"get" withUrl:PROVINCE_ALL withParams:nil withSuccessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        //所有省id+name
-        NSArray *provinces=[responseObject objectForKey:@"provinces"];
-        
-        for (NSDictionary *proDic in provinces)
-        {
-            //省id
-            int provid=[[proDic objectForKey:@"provid"] intValue];
-            //省名添加进pickerViewProvince
-            NSString *pname=[proDic objectForKey:@"pname"];
-            [pickerViewProvince addObject:pname];
-            //设置pickerViewPtoU，添加映射关系
-            [self setUniversityByProvid:provid provinceName:pname];
-        }
- 
-        NSLog(@"%@",responseObject);
-        
-    } withErrorBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSLog(@"%@",error);
-    }];
-
+    UINavigationController *nController=[[UINavigationController alloc] initWithRootViewController:[[MIChooseProvinceController alloc] initWithNibName:@"MIChoosePronvinceController" bundle:nil]];
+    
+    //隐藏工具栏
+    [nController setToolbarHidden:YES];
+    [nController setNavigationBarHidden:YES];
+    
+    nController.view.y=_educationInfoView.y+_educationInfoView.height;
+    nController.view.height=400;
+    [self addChildViewController:nController];
+    [self.view addSubview:nController.view];
+    
+    //使按钮失效
+    [self dismissUIController];
 }
 
 - (IBAction)close:(UIButton *)sender
@@ -239,8 +188,16 @@ static int pCnt=0;
     }];
     
 }
-- (IBAction)confirm:(UIButton *)sender {
+-(void)setUniversity:(NSString*)university
+{
+    _universityLabel.text=university;
 }
-
-
+-(void)setDepartment:(NSString*)department
+{
+    _departmentLabel.text=department;
+}
+- (IBAction)confirm:(UIButton *)sender
+{
+    
+}
 @end

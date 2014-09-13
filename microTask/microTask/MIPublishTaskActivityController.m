@@ -396,6 +396,7 @@
     SuccessBlock success=^(AFHTTPRequestOperation *operation, id responseObject)
     {
         NSLog(@"%@",responseObject);
+        NSLog(@"%@",[responseObject objectForKey:@"msg"]);
     };
     
     ErrorBlock error=^(AFHTTPRequestOperation *operation, NSError *error)

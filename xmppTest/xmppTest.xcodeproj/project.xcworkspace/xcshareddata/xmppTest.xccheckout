@@ -5,20 +5,22 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>466E9BB3-2FA2-4782-9133-A74CBBB3CDDD</string>
+	<string>30666C4C-AC37-48F1-91CD-FB0900D452B3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>microTask</string>
+	<string>xmppTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0FFC15F5-6467-44C0-86E3-EE588B255386</key>
 		<string>https://github.com/bhhbazinga/MicroTask-IPAD.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>microTask/microTask.xcworkspace</string>
+	<string>xmppTest/xmppTest.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0FFC15F5-6467-44C0-86E3-EE588B255386</key>
-		<string>../..</string>
+		<string>../../..</string>
+		<key>7EC331CC-A397-4020-947F-ADD1348F51B2</key>
+		<string>../../Vendor/facebook-ios-sdk</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/bhhbazinga/MicroTask-IPAD.git</string>
@@ -28,6 +30,14 @@
 	<string>0FFC15F5-6467-44C0-86E3-EE588B255386</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7EC331CC-A397-4020-947F-ADD1348F51B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>facebook-ios-sdk</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

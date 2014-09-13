@@ -107,6 +107,14 @@
 		DD8DFE5B19A0FA6300FD7C0F /* subImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8DFE4619A0FA6300FD7C0F /* subImage.png */; };
 		DD8DFE5C19A0FA6300FD7C0F /* weiboLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8DFE4719A0FA6300FD7C0F /* weiboLogin.png */; };
 		DD8DFE5D19A0FA6300FD7C0F /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8DFE4819A0FA6300FD7C0F /* time.png */; };
+		DD94BFA519C41BAE00EC97EB /* MIChooseProvinceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD94BFA419C41BAE00EC97EB /* MIChooseProvinceController.m */; };
+		DD94BFA719C41BC300EC97EB /* MIChoosePronvinceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFA619C41BC300EC97EB /* MIChoosePronvinceController.xib */; };
+		DD94BFAB19C41C6800EC97EB /* MIProvinceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD94BFA919C41C6800EC97EB /* MIProvinceCell.m */; };
+		DD94BFAC19C41C6800EC97EB /* MIProvinceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFAA19C41C6800EC97EB /* MIProvinceCell.xib */; };
+		DD94BFB219C43C8500EC97EB /* MIChooseUniversityController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD94BFB119C43C8500EC97EB /* MIChooseUniversityController.m */; };
+		DD94BFB419C43C9700EC97EB /* MIChooseUniversityController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFB319C43C9700EC97EB /* MIChooseUniversityController.xib */; };
+		DD94BFB819C443B100EC97EB /* MIUniversityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD94BFB619C443B100EC97EB /* MIUniversityCell.m */; };
+		DD94BFB919C443B100EC97EB /* MIUniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFB719C443B100EC97EB /* MIUniversityCell.xib */; };
 		DDA2496F19A3292E0049FC0E /* entertainment.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496C19A3292E0049FC0E /* entertainment.png */; };
 		DDA2497019A3292E0049FC0E /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496D19A3292E0049FC0E /* life.png */; };
 		DDA2497119A3292E0049FC0E /* study.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496E19A3292E0049FC0E /* study.png */; };
@@ -123,8 +131,6 @@
 		DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */; };
 		DDB9DD1419AB36A200EB9D63 /* MIUserCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */; };
 		DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBC70B819A0486D0078371E /* MIHttpTool.m */; };
-		DDC032DC19AD883400ED7572 /* MIUserEditUniversityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */; };
-		DDC032DE19AD884E00ED7572 /* UserEditUniversity.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */; };
 		DDCC197D19A78B3C00FB4D65 /* UIView+cat.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */; };
 		DDDE0BE919A3A0940051F66C /* MIFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB63DEE1995F20F008D4388 /* MIFindCell.m */; };
 		DDEDD1CA199F87B9003DBE51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEDD1C9199F87B9003DBE51 /* MapKit.framework */; };
@@ -340,6 +346,18 @@
 		DD8DFE4619A0FA6300FD7C0F /* subImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subImage.png; sourceTree = "<group>"; };
 		DD8DFE4719A0FA6300FD7C0F /* weiboLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogin.png; sourceTree = "<group>"; };
 		DD8DFE4819A0FA6300FD7C0F /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		DD94BFA319C41BAE00EC97EB /* MIChooseProvinceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIChooseProvinceController.h; sourceTree = "<group>"; };
+		DD94BFA419C41BAE00EC97EB /* MIChooseProvinceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIChooseProvinceController.m; sourceTree = "<group>"; };
+		DD94BFA619C41BC300EC97EB /* MIChoosePronvinceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIChoosePronvinceController.xib; sourceTree = "<group>"; };
+		DD94BFA819C41C6800EC97EB /* MIProvinceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIProvinceCell.h; sourceTree = "<group>"; };
+		DD94BFA919C41C6800EC97EB /* MIProvinceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIProvinceCell.m; sourceTree = "<group>"; };
+		DD94BFAA19C41C6800EC97EB /* MIProvinceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIProvinceCell.xib; sourceTree = "<group>"; };
+		DD94BFB019C43C8500EC97EB /* MIChooseUniversityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIChooseUniversityController.h; sourceTree = "<group>"; };
+		DD94BFB119C43C8500EC97EB /* MIChooseUniversityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIChooseUniversityController.m; sourceTree = "<group>"; };
+		DD94BFB319C43C9700EC97EB /* MIChooseUniversityController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIChooseUniversityController.xib; sourceTree = "<group>"; };
+		DD94BFB519C443B100EC97EB /* MIUniversityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUniversityCell.h; sourceTree = "<group>"; };
+		DD94BFB619C443B100EC97EB /* MIUniversityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUniversityCell.m; sourceTree = "<group>"; };
+		DD94BFB719C443B100EC97EB /* MIUniversityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUniversityCell.xib; sourceTree = "<group>"; };
 		DDA2496C19A3292E0049FC0E /* entertainment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entertainment.png; sourceTree = "<group>"; };
 		DDA2496D19A3292E0049FC0E /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life.png; sourceTree = "<group>"; };
 		DDA2496E19A3292E0049FC0E /* study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study.png; sourceTree = "<group>"; };
@@ -365,9 +383,6 @@
 		DDB9DD1219AB36A200EB9D63 /* MIUserCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUserCollectionViewController.xib; sourceTree = "<group>"; };
 		DDBC70B719A0486D0078371E /* MIHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHttpTool.h; sourceTree = "<group>"; };
 		DDBC70B819A0486D0078371E /* MIHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHttpTool.m; sourceTree = "<group>"; };
-		DDC032DA19AD883400ED7572 /* MIUserEditUniversityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditUniversityView.h; sourceTree = "<group>"; };
-		DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditUniversityView.m; sourceTree = "<group>"; };
-		DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEditUniversity.xib; sourceTree = "<group>"; };
 		DDCC197B19A78B3C00FB4D65 /* UIView+cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+cat.h"; sourceTree = "<group>"; };
 		DDCC197C19A78B3C00FB4D65 /* UIView+cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+cat.m"; sourceTree = "<group>"; };
 		DDEDD1C9199F87B9003DBE51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -458,14 +473,14 @@
 			name = imageGridView;
 			sourceTree = "<group>";
 		};
-		DD111B50199E50A500D0ED2C /* 发布任务&huodong */ = {
+		DD111B50199E50A500D0ED2C /* 发布任务&活动 */ = {
 			isa = PBXGroup;
 			children = (
 				DD63BAD21994E88F007FEB06 /* publishTaskActivityView.xib */,
 				DD4295001997422F001756EE /* MIPublishTaskActivityController.h */,
 				DD4295011997422F001756EE /* MIPublishTaskActivityController.m */,
 			);
-			name = "发布任务&huodong";
+			name = "发布任务&活动";
 			sourceTree = "<group>";
 		};
 		DD111B54199E53F400D0ED2C /* 附近任务活动查询 */ = {
@@ -559,7 +574,7 @@
 				DDF0FDC7199880FA00712B27 /* 注册&登录 */,
 				DD63BABE1994CD67007FEB06 /* 主界面 */,
 				DD111B54199E53F400D0ED2C /* 附近任务活动查询 */,
-				DD111B50199E50A500D0ED2C /* 发布任务&huodong */,
+				DD111B50199E50A500D0ED2C /* 发布任务&活动 */,
 				DD5839491991E8EC00ED9BBA /* 实体类 */,
 				DD578E1C198FB3E800C47D56 /* image */,
 				DD494F1C198F8F09009641C3 /* Images.xcassets */,
@@ -753,6 +768,8 @@
 		DD7DDDE219AC7A1D00114B6E /* 修改详细资料 */ = {
 			isa = PBXGroup;
 			children = (
+				DDC032D919AD87F300ED7572 /* 院校&院系选择 */,
+				DDC032D819AD87E100ED7572 /* 性别选择 */,
 				DDB7848619ACBA2700A0F1F6 /* 修改资料首页 */,
 				DDB7847E19ACA9E200A0F1F6 /* 修改个性签名 */,
 				DDB7847D19ACA9D800A0F1F6 /* 修改头像 */,
@@ -936,6 +953,39 @@
 			path = button;
 			sourceTree = "<group>";
 		};
+		DD94BFAD19C4311A00EC97EB /* 省份选择 */ = {
+			isa = PBXGroup;
+			children = (
+				DD94BFA819C41C6800EC97EB /* MIProvinceCell.h */,
+				DD94BFA919C41C6800EC97EB /* MIProvinceCell.m */,
+				DD94BFAA19C41C6800EC97EB /* MIProvinceCell.xib */,
+				DD94BFA319C41BAE00EC97EB /* MIChooseProvinceController.h */,
+				DD94BFA419C41BAE00EC97EB /* MIChooseProvinceController.m */,
+				DD94BFA619C41BC300EC97EB /* MIChoosePronvinceController.xib */,
+			);
+			name = "省份选择";
+			sourceTree = "<group>";
+		};
+		DD94BFAE19C4312800EC97EB /* 院校选择 */ = {
+			isa = PBXGroup;
+			children = (
+				DD94BFB019C43C8500EC97EB /* MIChooseUniversityController.h */,
+				DD94BFB119C43C8500EC97EB /* MIChooseUniversityController.m */,
+				DD94BFB319C43C9700EC97EB /* MIChooseUniversityController.xib */,
+				DD94BFB519C443B100EC97EB /* MIUniversityCell.h */,
+				DD94BFB619C443B100EC97EB /* MIUniversityCell.m */,
+				DD94BFB719C443B100EC97EB /* MIUniversityCell.xib */,
+			);
+			name = "院校选择";
+			sourceTree = "<group>";
+		};
+		DD94BFAF19C4314800EC97EB /* 院系选择 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "院系选择";
+			sourceTree = "<group>";
+		};
 		DDB7847D19ACA9D800A0F1F6 /* 修改头像 */ = {
 			isa = PBXGroup;
 			children = (
@@ -956,8 +1006,6 @@
 		DDB7848619ACBA2700A0F1F6 /* 修改资料首页 */ = {
 			isa = PBXGroup;
 			children = (
-				DDC032D919AD87F300ED7572 /* 院校&院系选择 */,
-				DDC032D819AD87E100ED7572 /* 性别选择 */,
 				DD7DDDE319AC7B2D00114B6E /* MIUserEditInfoController.h */,
 				DD7DDDE419AC7B2D00114B6E /* MIUserEditInfoController.m */,
 				DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */,
@@ -1024,9 +1072,9 @@
 		DDC032D919AD87F300ED7572 /* 院校&院系选择 */ = {
 			isa = PBXGroup;
 			children = (
-				DDC032DA19AD883400ED7572 /* MIUserEditUniversityView.h */,
-				DDC032DB19AD883400ED7572 /* MIUserEditUniversityView.m */,
-				DDC032DD19AD884E00ED7572 /* UserEditUniversity.xib */,
+				DD94BFAF19C4314800EC97EB /* 院系选择 */,
+				DD94BFAE19C4312800EC97EB /* 院校选择 */,
+				DD94BFAD19C4311A00EC97EB /* 省份选择 */,
 			);
 			name = "院校&院系选择";
 			sourceTree = "<group>";
@@ -1176,11 +1224,13 @@
 				DDFE317119A6246000A0CE41 /* imageScrollView.xib in Resources */,
 				DDB9DD1419AB36A200EB9D63 /* MIUserCollectionViewController.xib in Resources */,
 				DDF0FDC61998808000712B27 /* registerView.xib in Resources */,
+				DD94BFB919C443B100EC97EB /* MIUniversityCell.xib in Resources */,
 				DD8DFE5919A0FA6300FD7C0F /* point.png in Resources */,
 				DD494F7D198F9217009641C3 /* readme.txt in Resources */,
 				DD8DFE5519A0FA6300FD7C0F /* forward.png in Resources */,
 				DDB7848319ACB32700A0F1F6 /* MIUserEditProfileController.xib in Resources */,
 				DD8DFE4919A0FA6300FD7C0F /* leftBarBG.png in Resources */,
+				DD94BFB419C43C9700EC97EB /* MIChooseUniversityController.xib in Resources */,
 				DD63BAD31994E88F007FEB06 /* publishTaskActivityView.xib in Resources */,
 				DD8DFE5119A0FA6300FD7C0F /* chooseGroup.png in Resources */,
 				DD675E4619A258100068F9DF /* addFriend.png in Resources */,
@@ -1200,7 +1250,6 @@
 				DD8DFE5D19A0FA6300FD7C0F /* time.png in Resources */,
 				DD8DFE5619A0FA6300FD7C0F /* like.png in Resources */,
 				DD8DFE5C19A0FA6300FD7C0F /* weiboLogin.png in Resources */,
-				DDC032DE19AD884E00ED7572 /* UserEditUniversity.xib in Resources */,
 				DD8DFE5A19A0FA6300FD7C0F /* qqLogin.png in Resources */,
 				DD494F7C198F9217009641C3 /* mapapi.bundle in Resources */,
 				DD7DDDE919AC837200114B6E /* highlightedBG.png in Resources */,
@@ -1229,7 +1278,9 @@
 				DD578E22198FCBA400C47D56 /* loginField.png in Resources */,
 				DD8DFE4E19A0FA6300FD7C0F /* add2.png in Resources */,
 				DD590A5E19A9DAF100B2D09A /* boy.png in Resources */,
+				DD94BFA719C41BC300EC97EB /* MIChoosePronvinceController.xib in Resources */,
 				DD8DFE4F19A0FA6300FD7C0F /* avatar.tiff in Resources */,
+				DD94BFAC19C41C6800EC97EB /* MIProvinceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1294,18 +1345,21 @@
 				DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */,
 				DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */,
 				DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */,
-				DDC032DC19AD883400ED7572 /* MIUserEditUniversityView.m in Sources */,
 				DD58394C1991E90700ED9BBA /* MIUser.m in Sources */,
 				DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */,
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,
 				DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */,
+				DD94BFAB19C41C6800EC97EB /* MIProvinceCell.m in Sources */,
 				DD590A6419A9F07800B2D09A /* MISearchUTAController.m in Sources */,
 				DDB9DD0C19AB19A100EB9D63 /* MITaskActivityTableViewController.m in Sources */,
 				DDFE316F19A6234B00A0CE41 /* MIImageScrollController.m in Sources */,
+				DD94BFB819C443B100EC97EB /* MIUniversityCell.m in Sources */,
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
 				DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */,
 				DD494F11198F8F08009641C3 /* main.m in Sources */,
 				DDB7848E19ACC84B00A0F1F6 /* MIUserEditGenderView.m in Sources */,
+				DD94BFA519C41BAE00EC97EB /* MIChooseProvinceController.m in Sources */,
+				DD94BFB219C43C8500EC97EB /* MIChooseUniversityController.m in Sources */,
 				DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */,
 				DD0A134719A71E4800D38D04 /* MITAdetailController.m in Sources */,
 				DD7DDDDF19AC5EB700114B6E /* MIUserInfoController.m in Sources */,
