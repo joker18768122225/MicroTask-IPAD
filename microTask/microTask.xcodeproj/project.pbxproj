@@ -14,7 +14,12 @@
 		DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134B19A733EB00D38D04 /* MIImageGridView.m */; };
 		DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A134E19A7395B00D38D04 /* MIImageScaleUtil.m */; };
 		DD0C8533199791E800B4EA3B /* MYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C8532199791E800B4EA3B /* MYButton.m */; };
-		DD111B4F199E35BD00D0ED2C /* MIProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DD111B4E199E35BD00D0ED2C /* MIProperties.m */; };
+		DD111B4F199E35BD00D0ED2C /* MIProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD111B4E199E35BD00D0ED2C /* MIProperties.mm */; };
+		DD17D8E519C55CC10037C54D /* MIEditAvatarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17D8E419C55CC10037C54D /* MIEditAvatarController.m */; };
+		DD17D8E719C55CCF0037C54D /* MIEditAvatarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD17D8E619C55CCF0037C54D /* MIEditAvatarController.xib */; };
+		DD17D8EA19C594290037C54D /* Dialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD17D8E919C594290037C54D /* Dialog.xib */; };
+		DD17D8ED19C595920037C54D /* MIDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17D8EC19C595920037C54D /* MIDialogView.m */; };
+		DD17D8EF19C59D0D0037C54D /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = DD17D8EE19C59D0D0037C54D /* done.png */; };
 		DD4295021997422F001756EE /* MIPublishTaskActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4295011997422F001756EE /* MIPublishTaskActivityController.m */; };
 		DD494F05198F8F08009641C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD494F04198F8F08009641C3 /* Foundation.framework */; };
 		DD494F07198F8F08009641C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD494F06198F8F08009641C3 /* CoreGraphics.framework */; };
@@ -115,6 +120,10 @@
 		DD94BFB419C43C9700EC97EB /* MIChooseUniversityController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFB319C43C9700EC97EB /* MIChooseUniversityController.xib */; };
 		DD94BFB819C443B100EC97EB /* MIUniversityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD94BFB619C443B100EC97EB /* MIUniversityCell.m */; };
 		DD94BFB919C443B100EC97EB /* MIUniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD94BFB719C443B100EC97EB /* MIUniversityCell.xib */; };
+		DD9A8CE219C466A6002BC5F6 /* MIChooseDepartmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9A8CE119C466A6002BC5F6 /* MIChooseDepartmentController.m */; };
+		DD9A8CE419C466B7002BC5F6 /* MIChooseDepartmentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9A8CE319C466B7002BC5F6 /* MIChooseDepartmentController.xib */; };
+		DD9A8CE819C4675A002BC5F6 /* MIDepartmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9A8CE619C4675A002BC5F6 /* MIDepartmentCell.m */; };
+		DD9A8CE919C4675A002BC5F6 /* MIDepartmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9A8CE719C4675A002BC5F6 /* MIDepartmentCell.xib */; };
 		DDA2496F19A3292E0049FC0E /* entertainment.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496C19A3292E0049FC0E /* entertainment.png */; };
 		DDA2497019A3292E0049FC0E /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496D19A3292E0049FC0E /* life.png */; };
 		DDA2497119A3292E0049FC0E /* study.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA2496E19A3292E0049FC0E /* study.png */; };
@@ -126,6 +135,7 @@
 		DDB7848519ACB4D800A0F1F6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7848419ACB4D800A0F1F6 /* back.png */; };
 		DDB7848819ACC41800A0F1F6 /* editGenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB7848719ACC41800A0F1F6 /* editGenderView.xib */; };
 		DDB7848E19ACC84B00A0F1F6 /* MIUserEditGenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */; };
+		DDB840AE19C5C9B6001A8B22 /* MIMapService.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB840AD19C5C9B6001A8B22 /* MIMapService.m */; };
 		DDB9DD0C19AB19A100EB9D63 /* MITaskActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */; };
 		DDB9DD0D19AB19A100EB9D63 /* MITaskActivityTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */; };
 		DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB9DD1119AB36A200EB9D63 /* MIUserCollectionViewController.m */; };
@@ -167,7 +177,14 @@
 		DD0C8531199791E800B4EA3B /* MYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYButton.h; sourceTree = "<group>"; };
 		DD0C8532199791E800B4EA3B /* MYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYButton.m; sourceTree = "<group>"; };
 		DD111B4D199E35BD00D0ED2C /* MIProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIProperties.h; sourceTree = "<group>"; };
-		DD111B4E199E35BD00D0ED2C /* MIProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIProperties.m; sourceTree = "<group>"; };
+		DD111B4E199E35BD00D0ED2C /* MIProperties.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MIProperties.mm; sourceTree = "<group>"; };
+		DD17D8E319C55CC10037C54D /* MIEditAvatarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIEditAvatarController.h; sourceTree = "<group>"; };
+		DD17D8E419C55CC10037C54D /* MIEditAvatarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIEditAvatarController.m; sourceTree = "<group>"; };
+		DD17D8E619C55CCF0037C54D /* MIEditAvatarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIEditAvatarController.xib; sourceTree = "<group>"; };
+		DD17D8E919C594290037C54D /* Dialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dialog.xib; sourceTree = "<group>"; };
+		DD17D8EB19C595920037C54D /* MIDialogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDialogView.h; sourceTree = "<group>"; };
+		DD17D8EC19C595920037C54D /* MIDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDialogView.m; sourceTree = "<group>"; };
+		DD17D8EE19C59D0D0037C54D /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
 		DD4295001997422F001756EE /* MIPublishTaskActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPublishTaskActivityController.h; sourceTree = "<group>"; };
 		DD4295011997422F001756EE /* MIPublishTaskActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPublishTaskActivityController.m; sourceTree = "<group>"; };
 		DD494F01198F8F08009641C3 /* microTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = microTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,6 +375,12 @@
 		DD94BFB519C443B100EC97EB /* MIUniversityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUniversityCell.h; sourceTree = "<group>"; };
 		DD94BFB619C443B100EC97EB /* MIUniversityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUniversityCell.m; sourceTree = "<group>"; };
 		DD94BFB719C443B100EC97EB /* MIUniversityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIUniversityCell.xib; sourceTree = "<group>"; };
+		DD9A8CE019C466A6002BC5F6 /* MIChooseDepartmentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIChooseDepartmentController.h; sourceTree = "<group>"; };
+		DD9A8CE119C466A6002BC5F6 /* MIChooseDepartmentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIChooseDepartmentController.m; sourceTree = "<group>"; };
+		DD9A8CE319C466B7002BC5F6 /* MIChooseDepartmentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIChooseDepartmentController.xib; sourceTree = "<group>"; };
+		DD9A8CE519C4675A002BC5F6 /* MIDepartmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDepartmentCell.h; sourceTree = "<group>"; };
+		DD9A8CE619C4675A002BC5F6 /* MIDepartmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDepartmentCell.m; sourceTree = "<group>"; };
+		DD9A8CE719C4675A002BC5F6 /* MIDepartmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIDepartmentCell.xib; sourceTree = "<group>"; };
 		DDA2496C19A3292E0049FC0E /* entertainment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entertainment.png; sourceTree = "<group>"; };
 		DDA2496D19A3292E0049FC0E /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life.png; sourceTree = "<group>"; };
 		DDA2496E19A3292E0049FC0E /* study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study.png; sourceTree = "<group>"; };
@@ -374,6 +397,8 @@
 		DDB7848719ACC41800A0F1F6 /* editGenderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = editGenderView.xib; sourceTree = "<group>"; };
 		DDB7848C19ACC84B00A0F1F6 /* MIUserEditGenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUserEditGenderView.h; sourceTree = "<group>"; };
 		DDB7848D19ACC84B00A0F1F6 /* MIUserEditGenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUserEditGenderView.m; sourceTree = "<group>"; };
+		DDB840AC19C5C9B6001A8B22 /* MIMapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIMapService.h; sourceTree = "<group>"; };
+		DDB840AD19C5C9B6001A8B22 /* MIMapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMapService.m; sourceTree = "<group>"; };
 		DDB9DD0919AB19A100EB9D63 /* MITaskActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITaskActivityTableViewController.h; sourceTree = "<group>"; };
 		DDB9DD0A19AB19A100EB9D63 /* MITaskActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITaskActivityTableViewController.m; sourceTree = "<group>"; };
 		DDB9DD0B19AB19A100EB9D63 /* MITaskActivityTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MITaskActivityTableViewController.xib; sourceTree = "<group>"; };
@@ -403,6 +428,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD494F89198F92DC009641C3 /* Security.framework in Frameworks */,
+				DD494F07198F8F08009641C3 /* CoreGraphics.framework in Frameworks */,
+				DD494F87198F92CC009641C3 /* SystemConfiguration.framework in Frameworks */,
+				DD494F85198F92C6009641C3 /* OpenGLES.framework in Frameworks */,
+				DD494F83198F92BA009641C3 /* QuartzCore.framework in Frameworks */,
+				DD494F81198F92B3009641C3 /* CoreLocation.framework in Frameworks */,
 				DD8AEC8A1990F8DD00E5795B /* ImageIO.framework in Frameworks */,
 				DDEDD1CA199F87B9003DBE51 /* MapKit.framework in Frameworks */,
 				DD8AEC051990BB4900E5795B /* QQConnection.framework in Frameworks */,
@@ -412,20 +443,14 @@
 				DD8AEC091990BB4900E5795B /* AGCommon.framework in Frameworks */,
 				DD8AECBD1990FE8E00E5795B /* TencentOpenAPI.framework in Frameworks */,
 				DD8AECB01990FD1500E5795B /* libSinaWeiboSDK.a in Frameworks */,
-				DD494F89198F92DC009641C3 /* Security.framework in Frameworks */,
 				DD8AEC881990F8B900E5795B /* CFNetwork.framework in Frameworks */,
-				DD494F87198F92CC009641C3 /* SystemConfiguration.framework in Frameworks */,
 				DD8AEC201990BBC900E5795B /* MessageUI.framework in Frameworks */,
 				DD8AEC1E1990BBBA00E5795B /* libsqlite3.dylib in Frameworks */,
 				DD8AEC1C1990BB9700E5795B /* libstdc++.dylib in Frameworks */,
 				DD8AEC1A1990BB8A00E5795B /* libz.1.2.5.dylib in Frameworks */,
 				DD8AEC181990BB8100E5795B /* libicucore.dylib in Frameworks */,
 				DD8AEC161990BB7B00E5795B /* CoreTelephony.framework in Frameworks */,
-				DD494F83198F92BA009641C3 /* QuartzCore.framework in Frameworks */,
-				DD494F07198F8F08009641C3 /* CoreGraphics.framework in Frameworks */,
-				DD494F85198F92C6009641C3 /* OpenGLES.framework in Frameworks */,
 				DD8AEC0C1990BB4900E5795B /* ShareSDKCoreService.framework in Frameworks */,
-				DD494F81198F92B3009641C3 /* CoreLocation.framework in Frameworks */,
 				DD494F09198F8F08009641C3 /* UIKit.framework in Frameworks */,
 				DD8AEC141990BB4900E5795B /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */,
 				DD8AEC111990BB4900E5795B /* libWeChatSDK.a in Frameworks */,
@@ -491,6 +516,16 @@
 				DD63BAE219950F7C007FEB06 /* MIFindController.m */,
 			);
 			name = "附近任务活动查询";
+			sourceTree = "<group>";
+		};
+		DD17D8E819C593E70037C54D /* dialog */ = {
+			isa = PBXGroup;
+			children = (
+				DD17D8E919C594290037C54D /* Dialog.xib */,
+				DD17D8EB19C595920037C54D /* MIDialogView.h */,
+				DD17D8EC19C595920037C54D /* MIDialogView.m */,
+			);
+			name = dialog;
 			sourceTree = "<group>";
 		};
 		DD298C1119A095BC004BFC65 /* UIUtil */ = {
@@ -562,7 +597,7 @@
 				DD494F13198F8F08009641C3 /* MIAppDelegate.h */,
 				DD494F14198F8F08009641C3 /* MIAppDelegate.m */,
 				DD111B4D199E35BD00D0ED2C /* MIProperties.h */,
-				DD111B4E199E35BD00D0ED2C /* MIProperties.m */,
+				DD111B4E199E35BD00D0ED2C /* MIProperties.mm */,
 				DD494F16198F8F08009641C3 /* Main.storyboard */,
 				DDBC70B619A0484C0078371E /* uitility */,
 				DD7DDDDC19AC5E7E00114B6E /* 用户首页 */,
@@ -576,7 +611,7 @@
 				DD111B54199E53F400D0ED2C /* 附近任务活动查询 */,
 				DD111B50199E50A500D0ED2C /* 发布任务&活动 */,
 				DD5839491991E8EC00ED9BBA /* 实体类 */,
-				DD578E1C198FB3E800C47D56 /* image */,
+				DD578E1C198FB3E800C47D56 /* done.png */,
 				DD494F1C198F8F09009641C3 /* Images.xcassets */,
 				DD494F0B198F8F08009641C3 /* Supporting Files */,
 			);
@@ -706,9 +741,10 @@
 			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
-		DD578E1C198FB3E800C47D56 /* image */ = {
+		DD578E1C198FB3E800C47D56 /* done.png */ = {
 			isa = PBXGroup;
 			children = (
+				DD17D8EE19C59D0D0037C54D /* done.png */,
 				DD590A5C19A9DAF100B2D09A /* boy.png */,
 				DD590A5D19A9DAF100B2D09A /* girl.png */,
 				DD8DFE3219A0FA6300FD7C0F /* background */,
@@ -716,6 +752,7 @@
 				DD8DFE4819A0FA6300FD7C0F /* time.png */,
 				DD578E21198FCBA400C47D56 /* loginField.png */,
 			);
+			name = done.png;
 			path = image;
 			sourceTree = "<group>";
 		};
@@ -982,6 +1019,12 @@
 		DD94BFAF19C4314800EC97EB /* 院系选择 */ = {
 			isa = PBXGroup;
 			children = (
+				DD9A8CE019C466A6002BC5F6 /* MIChooseDepartmentController.h */,
+				DD9A8CE119C466A6002BC5F6 /* MIChooseDepartmentController.m */,
+				DD9A8CE319C466B7002BC5F6 /* MIChooseDepartmentController.xib */,
+				DD9A8CE519C4675A002BC5F6 /* MIDepartmentCell.h */,
+				DD9A8CE619C4675A002BC5F6 /* MIDepartmentCell.m */,
+				DD9A8CE719C4675A002BC5F6 /* MIDepartmentCell.xib */,
 			);
 			name = "院系选择";
 			sourceTree = "<group>";
@@ -989,6 +1032,9 @@
 		DDB7847D19ACA9D800A0F1F6 /* 修改头像 */ = {
 			isa = PBXGroup;
 			children = (
+				DD17D8E319C55CC10037C54D /* MIEditAvatarController.h */,
+				DD17D8E419C55CC10037C54D /* MIEditAvatarController.m */,
+				DD17D8E619C55CCF0037C54D /* MIEditAvatarController.xib */,
 			);
 			name = "修改头像";
 			sourceTree = "<group>";
@@ -1011,6 +1057,15 @@
 				DD7DDDE519AC7B2D00114B6E /* MIUserEditInfoController.xib */,
 			);
 			name = "修改资料首页";
+			sourceTree = "<group>";
+		};
+		DDB840AB19C5C971001A8B22 /* 地图服务 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB840AC19C5C9B6001A8B22 /* MIMapService.h */,
+				DDB840AD19C5C9B6001A8B22 /* MIMapService.m */,
+			);
+			name = "地图服务";
 			sourceTree = "<group>";
 		};
 		DDB9DD0319AB18E700EB9D63 /* 任务活动搜索列表 */ = {
@@ -1052,6 +1107,8 @@
 		DDBC70B619A0484C0078371E /* uitility */ = {
 			isa = PBXGroup;
 			children = (
+				DDB840AB19C5C971001A8B22 /* 地图服务 */,
+				DD17D8E819C593E70037C54D /* dialog */,
 				DD298C1119A095BC004BFC65 /* UIUtil */,
 				DDF82C6119A1BAFF00F1FE83 /* DateUtil */,
 				DDF82C6019A1BAE900F1FE83 /* HttpUtil */,
@@ -1245,6 +1302,7 @@
 				DD8AEC0B1990BB4900E5795B /* Resource.bundle in Resources */,
 				DDA2497319A32FC10049FC0E /* all.png in Resources */,
 				DD675E4E19A25E4A0068F9DF /* middleBG.png in Resources */,
+				DD17D8E719C55CCF0037C54D /* MIEditAvatarController.xib in Resources */,
 				DD63BAE019950EB4007FEB06 /* findView.xib in Resources */,
 				DD8DFE5219A0FA6300FD7C0F /* comment.png in Resources */,
 				DD8DFE5D19A0FA6300FD7C0F /* time.png in Resources */,
@@ -1252,6 +1310,7 @@
 				DD8DFE5C19A0FA6300FD7C0F /* weiboLogin.png in Resources */,
 				DD8DFE5A19A0FA6300FD7C0F /* qqLogin.png in Resources */,
 				DD494F7C198F9217009641C3 /* mapapi.bundle in Resources */,
+				DD17D8EF19C59D0D0037C54D /* done.png in Resources */,
 				DD7DDDE919AC837200114B6E /* highlightedBG.png in Resources */,
 				DD7DDDE719AC7B2D00114B6E /* MIUserEditInfoController.xib in Resources */,
 				DD494F0F198F8F08009641C3 /* InfoPlist.strings in Resources */,
@@ -1266,9 +1325,12 @@
 				DD494F18198F8F08009641C3 /* Main.storyboard in Resources */,
 				DD8DFE5819A0FA6300FD7C0F /* photo.png in Resources */,
 				DD8AEC131990BB4900E5795B /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
+				DD9A8CE919C4675A002BC5F6 /* MIDepartmentCell.xib in Resources */,
 				DD8AEC0A1990BB4900E5795B /* ShareSDKLocalizable.strings in Resources */,
 				DD5DF71C199674C200D2CD30 /* FindCell.xib in Resources */,
 				DD8DFE4A19A0FA6300FD7C0F /* loginBG.jpg in Resources */,
+				DD9A8CE419C466B7002BC5F6 /* MIChooseDepartmentController.xib in Resources */,
+				DD17D8EA19C594290037C54D /* Dialog.xib in Resources */,
 				DD8DFE5419A0FA6300FD7C0F /* find.png in Resources */,
 				DD7DDDE119AC5F8C00114B6E /* UserInfoController.xib in Resources */,
 				DD8DFE5B19A0FA6300FD7C0F /* subImage.png in Resources */,
@@ -1334,18 +1396,21 @@
 			files = (
 				DD7DDDE619AC7B2D00114B6E /* MIUserEditInfoController.m in Sources */,
 				DD63BAD91994F7F9007FEB06 /* KxMenu.m in Sources */,
+				DD9A8CE819C4675A002BC5F6 /* MIDepartmentCell.m in Sources */,
 				DDB7848219ACB32700A0F1F6 /* MIUserEditProfileController.m in Sources */,
-				DD111B4F199E35BD00D0ED2C /* MIProperties.m in Sources */,
+				DD111B4F199E35BD00D0ED2C /* MIProperties.mm in Sources */,
 				DDBC70B919A0486D0078371E /* MIHttpTool.m in Sources */,
 				DD494F15198F8F08009641C3 /* MIAppDelegate.m in Sources */,
 				DDB63DEC1995ECC5008D4388 /* MIFindCellInfo.m in Sources */,
 				DD590A4C19A998AC00B2D09A /* MIPoint.m in Sources */,
+				DD9A8CE219C466A6002BC5F6 /* MIChooseDepartmentController.m in Sources */,
 				DD590A5919A9D88000B2D09A /* MIUserCell.m in Sources */,
 				DD63BAE319950F7C007FEB06 /* MIFindController.m in Sources */,
 				DD0A134C19A733EB00D38D04 /* MIImageGridView.m in Sources */,
 				DDF0FDC41998806200712B27 /* MIRegisterController.m in Sources */,
 				DDB9DD1319AB36A200EB9D63 /* MIUserCollectionViewController.m in Sources */,
 				DD58394C1991E90700ED9BBA /* MIUser.m in Sources */,
+				DD17D8E519C55CC10037C54D /* MIEditAvatarController.m in Sources */,
 				DDF0FDD31998891900712B27 /* MIUpLoadFile.m in Sources */,
 				DD578E13198F9EE900C47D56 /* MILoginController.m in Sources */,
 				DDF82C6F19A1CA3300F1FE83 /* MICalendar.m in Sources */,
@@ -1357,7 +1422,9 @@
 				DD494F1B198F8F09009641C3 /* MIViewController.m in Sources */,
 				DD0A134119A71DB100D38D04 /* MITapGesture.m in Sources */,
 				DD494F11198F8F08009641C3 /* main.m in Sources */,
+				DD17D8ED19C595920037C54D /* MIDialogView.m in Sources */,
 				DDB7848E19ACC84B00A0F1F6 /* MIUserEditGenderView.m in Sources */,
+				DDB840AE19C5C9B6001A8B22 /* MIMapService.m in Sources */,
 				DD94BFA519C41BAE00EC97EB /* MIChooseProvinceController.m in Sources */,
 				DD94BFB219C43C8500EC97EB /* MIChooseUniversityController.m in Sources */,
 				DD0A134F19A7395B00D38D04 /* MIImageScaleUtil.m in Sources */,
@@ -1445,6 +1512,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1458,7 +1526,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/BaiduMap_Lib/Release-iphoneos";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1484,6 +1554,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1491,6 +1562,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/BaiduMap_Lib/Release-iphoneos";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -1519,7 +1592,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(PROJECT_DIR)/ShareSDK/Extend";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BaiduMap_Lib/Release-iphonesimulator",
 					"$(PROJECT_DIR)/BaiduMap_Lib/Release-iphoneos",
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
@@ -1553,7 +1625,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(PROJECT_DIR)/ShareSDK/Extend";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BaiduMap_Lib/Release-iphonesimulator",
 					"$(PROJECT_DIR)/BaiduMap_Lib/Release-iphoneos",
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",

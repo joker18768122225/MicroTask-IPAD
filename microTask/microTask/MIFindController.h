@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MITableCollectionViewDelegate.h"
-
-@interface MIFindController : UIViewController<MITableCollectionViewDelegate>
+#import "BMapKit.h"
+@interface MIFindController : UIViewController<MITableCollectionViewDelegate,BMKLocationServiceDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 

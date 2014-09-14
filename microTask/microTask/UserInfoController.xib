@@ -16,6 +16,7 @@
                 <outlet property="_nickNameLabel" destination="HbA-7q-rkd" id="CzH-Wa-qeb"/>
                 <outlet property="_profileTextView" destination="rgU-02-Zoi" id="7Va-TL-zGW"/>
                 <outlet property="_publishCntLabel" destination="fjS-U2-DDm" id="9SF-xA-aPy"/>
+                <outlet property="avatarButton" destination="XQp-vw-oVU" id="HXc-zI-vcr"/>
                 <outlet property="view" destination="mDy-Ec-fAc" id="WXD-SJ-9fg"/>
             </connections>
         </placeholder>

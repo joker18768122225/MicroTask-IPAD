@@ -94,7 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IZk-lJ-Wq1">
-                                <rect key="frame" x="316" y="554.5" width="394" height="50"/>
+                                <rect key="frame" x="316" y="555" width="394" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="QQ账号登录" backgroundImage="qqLogin.png">

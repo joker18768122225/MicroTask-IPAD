@@ -29,13 +29,18 @@
                                appSecret:@"50f263db0ba4e96492ae2ca96c79d815"
                              redirectUri:@"http://www.baidu.com"];
     */
-    
+    //shareSdk初始化
   
     [ShareSDK registerApp:@"api20"];
     
     [ShareSDK connectSinaWeiboWithAppKey:@"3201194191"
                                appSecret:@"0334252914651e8f76bad63337b3b78f"
                              redirectUri:@"http://appgo.cn"];
+    
+    
+    //百度地图初始化
+    _mapManager=[[BMKMapManager alloc] init];
+    BOOL ret=[_mapManager start:@"HaCwneC8HsttPYnzAdajhchQ" generalDelegate:nil];
     
     return YES;
 }

@@ -15,17 +15,17 @@
 #import "MIUpLoadFile.h"
 
 #import "MIHttpTool.h"
-
+#import "MIMapService.h"
 @interface MILoginController ()
 @end
 
 
 @implementation MILoginController
 @synthesize _weiboLoginButton=_weiboLoginButton;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,9 +72,8 @@
         NSDictionary *userDic=[dic objectForKey:@"user"];
         
         //初始化用户实例
-        [MIUser initWithUid:[userDic objectForKey:@"uid"] withNickName:[userDic objectForKey:@"nickname"] withGender:[userDic objectForKey:@"gender"] withAvatar:[userDic objectForKey:@"avatar"] withProfile:[userDic objectForKey:@"profile"] withCredit:[[userDic objectForKey:@"credit"] intValue] withMobile:[userDic objectForKey:@"mobile"] withFollowercnt:[[userDic objectForKey:@"followercnt"] intValue] withFollowcnt:[[userDic objectForKey:@"followcnt"] intValue] withUniversity:[userDic objectForKey:@"university"] withDepartment:[userDic objectForKey:@"department"]];
+        [MIUser initWithUid:[userDic objectForKey:@"uid"] withNickName:[userDic objectForKey:@"nickname"] withGender:[userDic objectForKey:@"gender"] withAvatar:[userDic objectForKey:@"avatar"] withProfile:[userDic objectForKey:@"profile"] withCredit:[[userDic objectForKey:@"credit"] intValue] withMobile:[userDic objectForKey:@"mobile"] withFollowercnt:[[userDic objectForKey:@"followercnt"] intValue] withFollowcnt:[[userDic objectForKey:@"followcnt"] intValue] withUniversity:[userDic objectForKey:@"university"] withDepartment:[userDic objectForKey:@"department"] withUnivid:[[userDic objectForKey:@"univid"] intValue] withDepid:[[userDic objectForKey:@"depid"] intValue]];
         
-        NSLog(@"%@",[userDic objectForKey:@"profile"]);
         
         [self performSegueWithIdentifier:@"LoginToMain" sender:self];
     }

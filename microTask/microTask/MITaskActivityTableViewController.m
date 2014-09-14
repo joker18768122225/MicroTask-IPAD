@@ -116,7 +116,12 @@
         //解析数据
         
         NSString *taid=[task_activity objectForKey:@"taid"];
-        CGFloat applycnt=[[task_activity objectForKey:@"applycnt"] doubleValue];
+        
+        int applycnt=[[task_activity objectForKey:@"applycnt"] intValue];
+        NSDictionary *coordinate=[task_activity objectForKey:@"coordinate"];
+        CGFloat longtitude=[[coordinate objectForKey:@"longtitude"] doubleValue];
+        CGFloat latitude=[[coordinate objectForKey:@"latitude"] doubleValue];
+        CGFloat distance=[[task_activity objectForKey:@"distance"] doubleValue];
         NSDictionary *user= [task_activity objectForKey:@"user"];
         NSString *avatar=[user objectForKey:@"avatar"];
         NSString *nickName=[user objectForKey:@"nickname"];
@@ -137,12 +142,15 @@
         //添加进cellInfos中
         MIFindCellInfo *cellInfo=[[MIFindCellInfo alloc]init];
         cellInfo.taid=taid;
+        cellInfo.distance=distance;
         cellInfo.nickName=nickName;
         cellInfo.publishDate=publishdate;
         cellInfo.expireDate=expiredate;
         cellInfo.avatar=avatar;
         cellInfo.my_relation=my_relation;
-        
+        cellInfo.applycnt=applycnt;
+        cellInfo.longtitude=longtitude;
+        cellInfo.latitude=latitude;
         if ([can_need_activity isEqualToString:@"can"])
             cellInfo.can_need_activity=@"可以帮忙";
         else if ([can_need_activity isEqualToString:@"need"])

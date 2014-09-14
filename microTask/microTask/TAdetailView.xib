@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MITAdetailController">
             <connections>
+                <outlet property="_addressLabel" destination="rf7-vD-kaE" id="SEV-3a-gsA"/>
                 <outlet property="_applyButton" destination="0gY-B8-YpB" id="9zu-dy-HhT"/>
                 <outlet property="_applyLabel" destination="IWA-yY-9dr" id="3yP-JC-BQI"/>
                 <outlet property="_buttonLabel" destination="e9Q-RM-Us5" id="4Hf-dG-525"/>
@@ -103,7 +104,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有X人申请" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IWA-yY-9dr">
-                            <rect key="frame" x="20" y="360" width="174" height="32"/>
+                            <rect key="frame" x="20" y="381" width="174" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rf7-vD-kaE">
+                            <rect key="frame" x="20" y="341" width="435" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

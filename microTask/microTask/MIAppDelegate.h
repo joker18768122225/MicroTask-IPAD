@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <ShareSDK/ShareSDK.h>
-
+#import "BMapKit.h"
 @interface MIAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property BMKMapManager *mapManager;
 @end

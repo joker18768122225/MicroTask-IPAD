@@ -33,6 +33,7 @@
 @property(nonatomic,assign) int applycnt;
 @property(nonatomic,assign) CGFloat distance;
 @property(nonatomic,assign) CGFloat height;
-
+@property(nonatomic,assign) CGFloat longtitude;
+@property(nonatomic,assign) CGFloat latitude;
 @property(nonatomic) CGSize contentSize;
 @end

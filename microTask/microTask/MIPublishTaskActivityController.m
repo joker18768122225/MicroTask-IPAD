@@ -14,6 +14,8 @@
 #import "MIHttpTool.h"
 #import "MIUser.h"
 #import "MIViewController.h"
+#import "MIMapService.h"
+#import "BMapKit.h"
 @implementation MIPublishTaskActivityController
 {
     int day;
@@ -21,7 +23,9 @@
     NSMutableArray *images;
     
     NSString *type;//小分类
- 
+    //百度地图位置服务
+    BMKLocationService *_locService;
+    BMKUserLocation *_location;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil Can_need_activity:(NSString*)can_need_activity
@@ -49,7 +53,11 @@
 {
     [super viewDidLoad];
     day=hour=0;
+    _locService=[[BMKLocationService alloc] init];
     
+    //启动LocationService
+    [_locService startUserLocationService];
+    _location=_locService.userLocation;
     images=[[NSMutableArray alloc]init];
     
     //改变图片列表边框
@@ -94,6 +102,8 @@
 
     if ((NSNull*)user.mobile!=[NSNull null]&& user.mobile!=nil&&![user.mobile isEqualToString:@""]&&![user.mobile isEqualToString:@"<null>"])
         self.mobileTextView.text=[MIUser getInstance].mobile;
+    
+
 
 }
 
@@ -389,8 +399,9 @@
     }
     
     [params setValue:mobile forKey:@"mobile"];
-    [params setValue:[NSNumber numberWithDouble:111.11111] forKey:@"longtitude"];
-    [params setValue:[NSNumber numberWithDouble:22.222222] forKey:@"latitude"];
+    
+    [params setValue:[NSNumber numberWithDouble:_location.location.coordinate.longitude] forKey:@"longtitude"];
+    [params setValue:[NSNumber numberWithDouble:_location.location.coordinate.latitude] forKey:@"latitude"];
     
     
     SuccessBlock success=^(AFHTTPRequestOperation *operation, id responseObject)
@@ -407,6 +418,13 @@
     [MIHttpTool httpRequestWithUrl:TASK_ACTIVITY_PUBLISH withParams:params withFiles:files withSuccessBlock:success withErrorBlock:error];
 }
 
+/*
+-(void)didUpdateUserLocation:(BMKUserLocation *)userLocation
+{
+    NSLog(@"%f,%f",userLocation.location.coordinate.longitude,userLocation.location.coordinate.latitude);
+    _location=userLocation;
+}
+*/
 
 
 

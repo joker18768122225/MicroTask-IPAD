@@ -11,6 +11,7 @@
 @interface MIUserInfoController : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *view;
 
+@property (weak, nonatomic) IBOutlet UIButton *avatarButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil userInfo:(MIUser*)user;
 @end

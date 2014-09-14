@@ -23,7 +23,8 @@
 #import "MIUser.h"
 #import "UIView+cat.h"
 #import "MITaskActivityTableViewController.h"
-
+#import "BMapKit.h"
+#import "MIMapService.h"
 @implementation MIFindController
 {
     //当前选择小分类的按钮
@@ -47,7 +48,13 @@
     //通用的展示任务活动的controller
     MITaskActivityTableViewController *_taTableController;
     
-
+    BMKLocationService *_locService;
+    double _longtitude,_latitude;
+    
+    ///是否第一次加载，若是第一次则需要先获取到位置在reloadAll
+    BOOL _firstLoad;
+    
+    
 }
 
 
@@ -60,8 +67,8 @@
         self.view.alpha = 1.0f;
     }];
 
-    //每次切换回来都要加载最新任务活动(根据上一次选择的类型)
-    [self reloadCurrent];
+    //每次切换回来都要加载最新任务活动(根据上一次选择的类型)(暂时不需要)
+    //[self reloadCurrent];
 }
 
 - (void)viewDidLoad
@@ -86,9 +93,14 @@
     //添加任务活动展示的controller
     [self addChildViewController:_taTableController];
     [_contentView addSubview:_taTableController.view];
+    
+    _firstLoad=YES;
+    //初始化定位服务
+    _locService=[[BMKLocationService alloc] init];
+     _locService.delegate=self;
+    [_locService startUserLocationService];
 
-    //首次则设置查询所有
-    [self reloadAll];
+
     
 }
 
@@ -110,8 +122,11 @@
     
     NSMutableDictionary *dic=[[NSMutableDictionary alloc] init];
     [dic setValue:[MIUser getInstance].uid forKey:@"uid"];
-    [dic setValue:[NSNumber numberWithDouble:111.111111] forKey:@"longtitude"];
-    [dic setValue:[NSNumber numberWithDouble:22.222222] forKey:@"latitude"];
+    
+    
+    [dic setValue:[NSNumber numberWithDouble:_longtitude]forKey:@"longtitude"];
+     
+    [dic setValue:[NSNumber numberWithDouble:_latitude] forKey:@"latitude"];
     [dic setValue:[NSNumber numberWithInt:page] forKey:@"page"];
     [dic setValue:[NSNumber numberWithInt:count] forKey:@"count"];
     
@@ -331,4 +346,20 @@
     chooseTypeButton.enabled=NO;
     [self reloadWithCan_Need_Activity:nil withType:@"life"];
 }
+
+-(void)didUpdateUserLocation:(BMKUserLocation *)userLocation
+{
+    _longtitude=userLocation.location.coordinate.longitude;
+    _latitude=userLocation.location.coordinate.latitude;
+    NSLog(@"%f,%f",_longtitude,_latitude);
+    
+    if (_firstLoad)
+    {
+        _firstLoad=NO;
+        [self reloadAll];
+    }
+    
+}
+
+
 @end

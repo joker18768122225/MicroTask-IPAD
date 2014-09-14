@@ -21,9 +21,11 @@
 
 @property(nonatomic,assign) int followercnt;
 @property(nonatomic,assign) int followcnt;
+@property(nonatomic,assign) int univid;
+@property(nonatomic,assign) int depid;
 
 +(MIUser*) getInstance;
 
-+(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile withFollowercnt:(int)followercnt withFollowcnt:(int)followcnt withUniversity:(NSString*)university withDepartment:(NSString*)department;
++(void)initWithUid:(NSString*)uid withNickName:(NSString*)nickName withGender:(NSString*)gender withAvatar:(NSString*)avatar withProfile:(NSString*)profile withCredit:(int)credit withMobile:(NSString*)mobile withFollowercnt:(int)followercnt withFollowcnt:(int)followcnt withUniversity:(NSString*)university withDepartment:(NSString*)department withUnivid:(int)univid withDepid:(int)depid;
 
 @end

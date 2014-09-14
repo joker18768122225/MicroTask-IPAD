@@ -73,6 +73,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="editAvatar:" destination="-1" eventType="touchUpInside" id="Wh5-M3-4tO"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5aG-id-lxz">
                     <rect key="frame" x="20" y="62" width="64" height="64"/>
@@ -115,6 +118,7 @@
                     </state>
                     <connections>
                         <action selector="editGender:" destination="-1" eventType="touchUpInside" id="FgC-Gj-eud"/>
+                        <action selector="editNickname:" destination="-1" eventType="touchUpInside" id="JK0-TN-3D1"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ccs-o4-oqY">
@@ -208,6 +212,9 @@
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="editDepartment:" destination="-1" eventType="touchUpInside" id="3Hu-26-OKh"/>
+                            </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx学院" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eve-Gl-ar0">
                             <rect key="frame" x="141" y="78" width="239" height="21"/>

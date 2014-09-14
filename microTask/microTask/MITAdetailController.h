@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MIFindCellInfo.h"
-@interface MITAdetailController : UIViewController
+#import "BMapKit.h"
+@interface MITAdetailController : UIViewController<BMKMapViewDelegate,BMKGeoCodeSearchDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 

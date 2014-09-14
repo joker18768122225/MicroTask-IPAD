@@ -14,6 +14,7 @@
 #import "MIViewController.h"
 #import "MIHttpTool.h"
 #import "MIUser.h"
+#import "BMapKit.h"
 @implementation MITAdetailController
 
 {
@@ -47,6 +48,7 @@
     
     __weak IBOutlet UILabel *_applyLabel;
  
+    __weak IBOutlet UILabel *_addressLabel;
     MIFindCellInfo *_info;
 }
 
@@ -140,8 +142,49 @@
     imageGridView.x=20;
     imageGridView.y=_eDateLabel.y+_eDateLabel.height+20;
     
+    //百度地图缩略图
+    BMKMapView *mView=[[BMKMapView alloc] initWithFrame:CGRectMake(0,0, 435, 200)];
+    //设置地图中心并添加标注
+    CLLocationCoordinate2D taLoc;
+    taLoc.longitude=_info.longtitude;
+    taLoc.latitude=_info.latitude;
+    [mView setCenterCoordinate:taLoc];
+    [mView setZoomLevel:17];
+    
+    BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+    annotation.coordinate = taLoc;
+    
+    [mView addAnnotation:annotation];
+    mView.userInteractionEnabled=NO;
+    
+    
+    
+    UIView *mViewParent=[[UIView alloc] initWithFrame:CGRectMake(20, imageGridView.y+20+imageGridView.height, 435, 200)];
+    [mViewParent addSubview:mView];
+    
+    [_scrollView addSubview:mViewParent];
+    
+    //地址(反向地理编码)
+    BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[
+                                                            BMKReverseGeoCodeOption alloc]init];
+    reverseGeoCodeSearchOption.reverseGeoPoint = taLoc;
+    BMKGeoCodeSearch *_searcher =[[BMKGeoCodeSearch alloc]init];
+    _searcher.delegate=self;
+    
+    BOOL flag = [_searcher reverseGeoCode:reverseGeoCodeSearchOption];
+    if(flag)
+    {
+        NSLog(@"反geo检索发送成功");
+    }
+    else
+    {
+        NSLog(@"反geo检索发送失败");
+    }
+    _addressLabel.y=mViewParent.y+10+mViewParent.height;
+    
+    //申请人数
     _applyLabel.text=[NSString stringWithFormat:@"已有%d人申请",_info.applycnt];
-    _applyLabel.y=imageGridView.y+20+imageGridView.height;
+    _applyLabel.y=_addressLabel.y+20+_addressLabel.height;
     
     
     
@@ -186,8 +229,22 @@
         NSLog(@"%@",responseObject);
         
     } withErrorBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
-         NSLog(@"%@",error);
+        NSLog(@"%@",error);
     }];
 }
+
+///接收反向地理编码结果
+-(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:
+(BMKReverseGeoCodeResult *)result
+                        errorCode:(BMKSearchErrorCode)error{
+    if (error == BMK_SEARCH_NO_ERROR) {
+        double distance=_info.distance*1000;
+        _addressLabel.text=[NSString stringWithFormat:@"%@(距离:%.0lf米)",result.address,distance];
+    }
+    else {
+        NSLog(@"抱歉，未找到结果");
+    }
+}
+
 
 @end

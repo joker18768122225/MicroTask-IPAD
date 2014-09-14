@@ -21,7 +21,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     //滑入
-    self.view.x=450;
+    self.view.x=self.view.width;
     [UIView animateWithDuration:0.25 animations:^{
         self.view.x=0;
     }];

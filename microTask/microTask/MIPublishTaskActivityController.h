@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MIPublishTaskActivityController : UIViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+#import "BMapKit.h"
+@interface MIPublishTaskActivityController : UIViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,BMKLocationServiceDelegate,BMKLocationServiceDelegate>
 {
+    
     int x;
 }
 @property NSString *can_need_activity;
