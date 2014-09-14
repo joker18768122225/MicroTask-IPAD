@@ -25,6 +25,7 @@
 #import "MITaskActivityTableViewController.h"
 #import "BMapKit.h"
 #import "MIMapService.h"
+
 @implementation MIFindController
 {
     //当前选择小分类的按钮
@@ -49,11 +50,12 @@
     MITaskActivityTableViewController *_taTableController;
     
     BMKLocationService *_locService;
+    BMKUserLocation *_location;
+    
     double _longtitude,_latitude;
     
     ///是否第一次加载，若是第一次则需要先获取到位置在reloadAll
     BOOL _firstLoad;
-    
     
 }
 
@@ -69,6 +71,9 @@
 
     //每次切换回来都要加载最新任务活动(根据上一次选择的类型)(暂时不需要)
     //[self reloadCurrent];
+    
+    //每次都要重新定位
+    _location=_locService.userLocation;
 }
 
 - (void)viewDidLoad
@@ -95,11 +100,12 @@
     [_contentView addSubview:_taTableController.view];
     
     _firstLoad=YES;
+    
     //初始化定位服务
     _locService=[[BMKLocationService alloc] init];
      _locService.delegate=self;
     [_locService startUserLocationService];
-
+    
 
     
 }
@@ -358,8 +364,6 @@
         _firstLoad=NO;
         [self reloadAll];
     }
-    
 }
-
 
 @end

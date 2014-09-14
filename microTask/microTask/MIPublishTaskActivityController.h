@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
-@interface MIPublishTaskActivityController : UIViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,BMKLocationServiceDelegate,BMKLocationServiceDelegate>
+@interface MIPublishTaskActivityController : UIViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,BMKLocationServiceDelegate>
 {
     
     int x;

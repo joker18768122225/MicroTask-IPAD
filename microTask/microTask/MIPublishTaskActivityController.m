@@ -54,10 +54,10 @@
     [super viewDidLoad];
     day=hour=0;
     _locService=[[BMKLocationService alloc] init];
-    
     //启动LocationService
     [_locService startUserLocationService];
-    _location=_locService.userLocation;
+    _locService.delegate=self;
+    
     images=[[NSMutableArray alloc]init];
     
     //改变图片列表边框
@@ -418,13 +418,13 @@
     [MIHttpTool httpRequestWithUrl:TASK_ACTIVITY_PUBLISH withParams:params withFiles:files withSuccessBlock:success withErrorBlock:error];
 }
 
-/*
+
 -(void)didUpdateUserLocation:(BMKUserLocation *)userLocation
 {
-    NSLog(@"%f,%f",userLocation.location.coordinate.longitude,userLocation.location.coordinate.latitude);
+    //NSLog(@"%f,%f",userLocation.location.coordinate.longitude,userLocation.location.coordinate.latitude);
     _location=userLocation;
 }
-*/
+
 
 
 
